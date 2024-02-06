@@ -10,6 +10,6 @@ public class MainController {
 
     @GetMapping
     public String index(){
-        return "admin/index";
+        return "admin/layout/main";
     }
 }

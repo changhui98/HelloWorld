@@ -15,3 +15,8 @@ spring:
         dialect: org.hibernate.dialect.OracleDialect
     hibernate:
       ddlAuto: create
+
+  # 타임리프 설정 #
+  thymeleaf:
+    cache: false
+    prefix: file:src/main/resources/templates/
