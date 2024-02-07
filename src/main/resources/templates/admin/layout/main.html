@@ -10,13 +10,35 @@
 </head>
 <body>
 
-<!--Header-->
+<!--Header Start-->
 <div th:replace="~{admin/layout/header :: headerFragment}"></div>
 
+<!--Header End-->
 
 
-<!--Footer-->
+<!--Main Start-->
+<div>
+    <!--Aside Start-->
+    <div>
+        사이드메뉴
+    </div>
+
+    <!--Aside End-->
+
+    <!--Content Start-->
+    <div th:replace="~{/admin/index:: adminContent}">
+
+    </div>
+    <!--Content End-->
+
+</div>
+
+<!--Main End-->
+
+<!--Footer Start-->
 <div th:replace="~{admin/layout/footer :: footerFragment}"></div>
+
+<!--Footer End-->
 
 </body>
 </html>
