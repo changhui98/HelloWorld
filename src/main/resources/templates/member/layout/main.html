@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org"
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hello World | MAIN</title>
+</head>
+<body>
+<!-- Header Start -->
+<div th:replace="~{member/layout/header:: headerFragment}"></div>
+
+<!-- Header End -->
+
+<!-- Main Start -->
+<div>
+    <!--Aside Start-->
+    <div>
+        사이드메뉴
+    </div>
+
+    <!--Aside End-->
+
+    <!--Content Start-->
+    <div th:replace="~{/member/index:: memberContent}">
+
+    </div>
+    <!--Content End-->
+
+</div>
+
+
+<!-- Main End -->
+
+<!-- Footer Start -->
+<div th:replace="~{member/layout/footer:: footerFragment}"></div>
+
+
+<!-- Footer End -->
+
+</body>
+</html>
