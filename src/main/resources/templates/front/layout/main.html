@@ -16,17 +16,14 @@
 
 <!-- Main Start -->
 <div>
-    <!--Aside Start-->
-    <div>
-        사이드메뉴
-    </div>
 
-    <!--Aside End-->
 
     <!--Content Start-->
-    <div th:replace="~{/front/index:: memberContent}">
+   <!--창희 <div th:replace="~{/front/index:: frontContent}"> -->
+    <main layout:fragment="frontContent"></main>
 
-    </div>
+
+</div>
     <!--Content End-->
 
 </div>
@@ -35,6 +32,7 @@
 <!-- Main End -->
 
 <!-- Footer Start -->
+
 <div th:replace="~{front/layout/footer:: footerFragment}"></div>
 
 
