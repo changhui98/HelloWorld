@@ -12,6 +12,6 @@ public class FrontController {
     @GetMapping
     public String index(){
 
-        return "member/index";
+        return "front/index";
     }
 }
