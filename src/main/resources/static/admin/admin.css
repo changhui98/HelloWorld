@@ -20,6 +20,9 @@ li {
     display:inline-block;
 }
 
-
+.headerNav> ul {
+    display: flex;
+    justify-content: space-between;
+}
 
 /* Header Css End */

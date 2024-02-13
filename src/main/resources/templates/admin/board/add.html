@@ -1,0 +1,18 @@
+<!-- 게시판 등록 템플릿 -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+    layout:decorate="~{admin/layout/main}">
+
+<section layout:fragment="adminContent">
+    테스트입니다.(연결성공 확인) 2월 13일 17시 35분
+    <form>
+        <th:block th:replace="~{admin/board/form:: form}"></th:block>
+
+    </form>
+
+</section>
+
+
+</html>
+
