@@ -1,0 +1,25 @@
+/* 관리자페이지 전체 범위 */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+li {
+    list-style: none;
+}
+/* Header Css Start */
+
+.adminHeader {
+    display: flex;
+    justify-content: space-between;
+}
+
+.adminHeader > div > ul > li {
+    display:inline-block;
+}
+
+
+
+/* Header Css End */
