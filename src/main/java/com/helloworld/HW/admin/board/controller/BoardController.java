@@ -10,7 +10,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/admin/board")
 public class BoardController {
 
-
+    /**
+     * 게시판 등록
+     *
+     * @param model
+     * @return
+     */
     @GetMapping("/add")
     public String add(Model model){
 
