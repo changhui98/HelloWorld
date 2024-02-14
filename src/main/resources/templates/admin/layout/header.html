@@ -1,45 +1,37 @@
-
-
 <header th:fragment="headerFragment">
-    <div class="adminHeader">
-        <h1>HEADER</h1>
-        <div>
-            <ul>
-                <li>Homepage</li>
-                <li>Logout</li>
-            </ul>
-        </div>
+    <div>
+        <h1><a href="#"><span>LOGO</span></a></h1>
     </div>
-    <nav class="headerNav">
-        <ul class="admin_ul">
-            <li>
-                <a href="#">회원관리</a>
-                <ul class="depth_1">
-                    <li><a>회원관리 메뉴1</a></li>
-                    <li><a>회원관리 메뉴2</a></li>
-                    <li><a>회원관리 메뉴3</a></li>
+
+    <nav class="clearfix mainmenu">
+        <ul class="submenu">
+            <li><a href="#"><span>회원 관리</span></a>
+                <ul>
+                    <li>회원조회</li>
                 </ul>
             </li>
 
-            <li>
-                <a href="#">게시판관리</a>
-                <ul class="depth_1">
-                    <li><a>게시판 리스트</a></li>
-                    <li><a>게시판 등록</a></li>
-                    <li><a>게시글 리스트</a></li>
+            <li><a href="#"><span>게시판 관리</span></a>
+                <ul class="submenu">
+                    <li>게시판관리</li>
+                    <li>게시판등록</li>
+                    <li>게시글관리</li>
                 </ul>
             </li>
 
-            <li>
-                <a href="#">기타관리</a>
-                <ul class="depth_1">
-                    <li><a>기타 관리1</a></li>
-                    <li><a>기타 관리2</a></li>
-                    <li><a>기타 관리3</a></li>
+            <li><a href="#"><span>기타 관리</span></a>
+                <ul class="submenu">
+                    <li><a>메뉴1</a></li>
+                    <li><a>메뉴2</a></li>
                 </ul>
             </li>
         </ul>
     </nav>
+
+    <div>
+        <a href="#">HOME</a>
+    </div>
+
 </header>
 
 
