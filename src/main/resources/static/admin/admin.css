@@ -1,117 +1,65 @@
-/* 관리자페이지 전체 범위 */
+/* 관리자페이지 공통 범위 */
 * {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    outline: none;
 }
 
-
-
-header {
-    margin-top: 15px;
+ul, li {
+    list-style:none;
 }
 
-li {
-    list-style: none;
+.clearfix:after {
+    content: ' ';
+    display: block;
+    clear: both;
 }
 
 a {
     text-decoration: none;
-}
-
-a:link {
     color: black;
 }
 
-a:visited {
-    color: black;
+body {
+    background: lightblue;
+    overflow-y: scroll;
+    padding-top: 70px;
 }
 
-a:hover {
-    color: white;
-}
-
-a:active {
-    color: black;
-}
 
 /* Header Css Start */
-
-.adminHeader {
-    display: flex;
-    justify-content: space-between;
-}
-
-.adminHeader > div > ul > li {
-    display:inline-block;
-}
-
-.admin_ul:after {
-    display: block;
-    content: ' ';
-    clear:both;
-}
-
-.admin_ul {
-    display: flex;
-    justify-content: center;
-}
-
-.admin_ul > li {
-    width: 150px;
-    background: #FFE6E6;
-    border-radius: 5px;
-    position: relative;
-    float:left;
-    margin-right: 5px;
-}
-
-.admin_ul > li > a {
-    display: block;
-    padding: 0 15px;
-
-    height: 40px;
-    line-height: 40px;
-    text-align: center;
-}
-
-.admin_ul > li > a:hover {
-    background-color: lightcoral;
-    color: white;
-    border-radius:5px;
-}
-
-.admin_ul > li:hover .depth_1 {
-    display: block;
-}
-
-.admin_ul .depth_1 {
-    display: none;
+header {
+    display:flex;
+    justify-content:space-between;
+    margin-top: 20px;
+    background: linear-gradient(white 50px,
+        rgba(255, 255, 255, 0.5) 50px,
+        rgba(255, 255,255, 0.5) );
+    height: 50px;
+    overflow: hidden;
+    transition: height 0.4s;
     position: absolute;
+    top: 0;
     left: 0;
     right: 0;
-    text-align: center;
 }
 
-.admin_ul .depth_1 a {
-    display:block;
-    padding: 5px;
-    background: #FFE6E6;
-    color: black;
+header > div {
+    line-height: 50px;
 }
 
-.admin_ul .depth_1 a:hover {
-    background: lightcoral;
-    color:white;
-    border-radius:5px;
-}
-/* Header Css End */
-
-/* section Css Start */
-section {
-    height: 700px;
+nav > ul > li {
+    float: left;
+    line-height: 50px;
+    margin-right: 40px;
+    position: relative;
 }
 
+nav > ul > li ul {
+    width: 100%;
+    position: absolute;
+}
 
-/* section Css End */
+nav > ul > li ul li {
+    white-space: nowrap;
+}
