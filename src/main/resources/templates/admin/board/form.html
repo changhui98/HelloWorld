@@ -1,7 +1,45 @@
-<th:block th:fragment="form">
+<th:block th:fragment="form" th:object="${requestBoardConfig}">
 
 
     폼 템플릿 테스트입니다.(연결성공 확인) 2월 13일 17시 47분
+    <h2>게시판 기본설정</h2>
+    <table>
+        <tr>
+            <th>사용여부</th>
+            <td>
+                <input type="radio" name="active" value="true" id="active_true" th:field="*{active}">
+                <label for="active_true">사용</label>
+                <input type="radio" name="active" value="false" id="active_false" th:field="*{active}">
+                <label for="active_false">미사용</label>
+            </td>
+        </tr>
+
+        <tr>
+            <th>게시판ID</th>
+            <td>
+                <input type="text" name="bid">
+            </td>
+        </tr>
+
+        <tr>
+            <th>게시판 카테고리</th>
+            <td>
+                <input type="text" name="category">
+            </td>
+        </tr>
+    </table>
+
+    <h2>게시판 분류</h2>
+    <table>
+        <tr>
+            <th>분류</th>
+            <td>
+                <textarea name="bName" placeholder="여러 분류는 줄개행하여 입력"></textarea>
+            </td>
+        </tr>
+    </table>
+
+
 </th:block>
 
 

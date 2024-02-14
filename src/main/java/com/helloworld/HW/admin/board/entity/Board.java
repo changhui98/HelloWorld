@@ -30,4 +30,6 @@ public class Board extends BaseDate {
 
     @Lob
     private String bName; // 게시판 하위 분류 이름
+
+    private boolean active; // 게시판 사용 여부
 }
