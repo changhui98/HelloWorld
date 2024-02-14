@@ -1,6 +1,8 @@
 package com.helloworld.HW.admin.board.controller;
 
+import com.helloworld.HW.admin.board.dto.RequestBoardConfig;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -10,7 +12,9 @@ public class BoardController {
 
 
     @GetMapping("/add")
-    public String add(){
+    public String add(Model model){
+
+        model.addAttribute("requestBoardConfig", new RequestBoardConfig());
 
         return "admin/board/add";
     }
