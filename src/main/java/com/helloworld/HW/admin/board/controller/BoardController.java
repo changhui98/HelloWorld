@@ -10,6 +10,19 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/admin/board")
 public class BoardController {
 
+
+    /**
+     * 게시판 관리자 메인 페이지
+     *
+     * @return
+     */
+    @GetMapping
+    public String board(){
+
+        return "admin/board/board";
+    }
+
+
     /**
      * 게시판 등록
      *

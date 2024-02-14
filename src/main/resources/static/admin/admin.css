@@ -6,8 +6,10 @@
     outline: none;
 }
 
-body {
-    width: 80%;
+
+
+header {
+    margin-top: 15px;
 }
 
 li {
@@ -104,6 +106,12 @@ a:active {
     color:white;
     border-radius:5px;
 }
-
-
 /* Header Css End */
+
+/* section Css Start */
+section {
+    height: 700px;
+}
+
+
+/* section Css End */
