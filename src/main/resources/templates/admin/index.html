@@ -4,8 +4,102 @@
     xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
     layout:decorate="~{admin/layout/main}">
 
-<div th:fragment="adminContent">
-    ADMIN PAGE INDEX Hi
-</div>
+<section layout:fragment="adminContent">
+    <h1>관리자페이지</h1>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          var calendarEl = document.getElementById("calendar");
+          var calendar = new FullCalendar.Calendar(calendarEl, {
+            locale: "ko",
+            initialView: "dayGridMonth",
+            headerToolbar: {
+              left: "prev,next today",
+              center: "title",
+              right: "dayGridMonth,timeGridWeek,timeGridDay,listMonth",
+            },
+            googleCalendarApiKey: "AIzaSyB0x0KPjzmlWCurZAH0TLzf803soilebuM",
+            events: {
+              googleCalendarId:
+                "23ebfc185d5516e2fc9ef57839bb0c62c645eaa738435849fa38f6524d195b44@group.calendar.google.com",
+              className: "gcal-event", // an option!
+            },
+            eventClick: function (info) {
+              let start_year = info.event.start.getUTCFullYear();
+              let start_month = info.event.start.getMonth() + 1;
+              let start_date = info.event.start.getUTCDate();
+              let start_hour = info.event.start.getHours();
+              let start_minute = info.event.start.getMinutes();
+              let start_second = info.event.start.getSeconds();
+              let end_hour = info.event.end.getHours();
+
+              let start =
+                start_year +
+                "-" +
+                start_month +
+                "-" +
+                start_date +
+                " " +
+                start_hour +
+                "시 ~ " +
+                end_hour +
+                "시";
+
+              let attends = "";
+              info.event.extendedProps.attachments.forEach(function (item) {
+                attends +=
+                  "<div><a href='" +
+                  item.fileUrl +
+                  "' target='_blank'>[첨부파일]</a></div>";
+              });
+
+              if (!info.event.extendedProps.description) {
+                info.event.extendedProps.description = "";
+              }
+              let contents = `
+                          <div style='font-weight:bold; font-size:20px; margin-bottom:30px; text-align:center'>
+                              ${start}
+                          </div>
+                          <div style='font-size:18px; margin-bottom:20px'>
+                              제목: ${info.event.title}
+                          </div>
+                          <div style='width:500px'>
+                              ${info.event.extendedProps.description}
+                              ${attends}
+                          </div>
+                        `;
+
+              $("#popup").html(contents);
+              $("#popup").bPopup({
+                speed: 650,
+                transition: "slideIn",
+                transitionClose: "slideBack",
+                position: [($(document).width() - 500) / 2, 30], //x, y
+              });
+              info.jsEvent.stopPropagation();
+              info.jsEvent.preventDefault();
+            },
+          });
+          calendar.render();
+        });
+    </script>
+    <div id="calendar"></div>
+    <div
+            id="popup"
+            style="
+        width: 500px;
+        height: 600px;
+        display: none;
+        background-color: white;
+        padding: 20px;
+        border-radius: 14px;
+        border: 2px solid #eeeeee;
+      "
+    ></div>
+</section>
 
 </html>
