@@ -8,8 +8,6 @@ import java.util.UUID;
 @Data
 public class RequestBoardConfig {
 
-    private String mode = "add";
-
     private String gid = UUID.randomUUID().toString();
 
     private boolean active; // 게시판 사용 여부

@@ -6,7 +6,7 @@
 
 <section layout:fragment="adminContent">
     테스트입니다.(연결성공 확인) 2월 13일 17시 35분
-    <form>
+    <form th:action="@{/admin/board/save}" method="post">
         <th:block th:replace="~{admin/board/form:: form}"></th:block>
 
         <div>
