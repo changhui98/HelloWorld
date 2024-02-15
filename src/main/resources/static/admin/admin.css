@@ -21,7 +21,7 @@ a {
 }
 
 body {
-    background: lightblue;
+
     overflow-y: scroll;
     padding-top: 70px;
 }
@@ -62,4 +62,10 @@ nav > ul > li ul {
 
 nav > ul > li ul li {
     white-space: nowrap;
+}
+
+#fromInsideOut li:hover {
+    content: "";
+    border-bottom: 0.5px solid #000;
+    transition: all 250ms ease-out;
 }

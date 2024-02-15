@@ -2,12 +2,14 @@ let header = document.querySelector('header'),
     nav = document.querySelector('nav');
 
      nav.addEventListener('mouseover', function(){
-        header.style.height = '190px';
+        header.style.height = '220px';
      });
 
      nav.addEventListener('mouseout', function(){
         header.style.height = '50px';
      });
+
+/* 아래 코드는 먹지 않음.  */
 
 let mainMenuList = document.querySelectorAll('.mainmenu > li'),
     subMenu = document.querySelectorAll('.submenu'),
