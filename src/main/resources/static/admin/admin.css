@@ -17,7 +17,7 @@ ul, li {
 
 a {
     text-decoration: none;
-    color: black;
+    color: gray;
 }
 
 body {
@@ -29,9 +29,9 @@ body {
 
 /* Header Css Start */
 header {
+    width: 1200px;
     display:flex;
-    justify-content:space-between;
-    margin-top: 20px;
+    justify-content:space-around;
     background: linear-gradient(white 50px,
         rgba(255, 255, 255, 0.5) 50px,
         rgba(255, 255,255, 0.5) );
@@ -42,6 +42,8 @@ header {
     top: 0;
     left: 0;
     right: 0;
+    margin: 0 auto;
+    margin-top: 20px;
 }
 
 header > div {
@@ -69,3 +71,28 @@ nav > ul > li ul li {
     border-bottom: 0.5px solid #000;
     transition: all 250ms ease-out;
 }
+
+#fromInsideOut a:hover {
+    color:black;
+}
+
+/* Header Css End */
+
+/* Section Css Start */
+section {
+    width: 800px;
+    margin: 0 auto;
+}
+
+/* Section Css End */
+
+/* Footer Css Start */
+footer {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* Footer Css End */
+
+
