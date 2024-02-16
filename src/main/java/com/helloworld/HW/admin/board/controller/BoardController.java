@@ -2,9 +2,11 @@ package com.helloworld.HW.admin.board.controller;
 
 import com.helloworld.HW.admin.board.dto.RequestBoardConfig;
 import com.helloworld.HW.admin.board.service.BoardSaveService;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -16,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class BoardController {
 
     private final BoardSaveService boardSaveService;
+    private final BoardValidator boardValidator;
 
     /**
      * 게시판 관리자 메인 페이지
@@ -31,7 +34,7 @@ public class BoardController {
 
 
     /**
-     * 게시판 등록
+     * 게시판 등록 페이지 템플릿 출력
      *
      * @param model
      * @return
@@ -42,8 +45,22 @@ public class BoardController {
         return "admin/board/add";
     }
 
+    /**
+     * 게시판 등록 처리
+     *
+     * @param config
+     * @param errors
+     * @param model
+     * @return
+     */
     @PostMapping("/save")
-    public String save(RequestBoardConfig config, Model model){
+    public String save(@Valid RequestBoardConfig config, Errors errors, Model model){
+
+        boardValidator.validate(config, errors);
+        if(errors.hasErrors()){
+            errors.getAllErrors().stream().forEach(System.out::println);
+            return "admin/board/add";
+        }
 
         boardSaveService.save(config);
 
