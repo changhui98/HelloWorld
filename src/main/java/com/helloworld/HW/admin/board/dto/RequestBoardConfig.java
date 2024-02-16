@@ -18,5 +18,6 @@ public class RequestBoardConfig {
     @NotBlank
     private String category; // 게시판 카테고리
 
+    @NotBlank
     private String bName; // 게시판 이름
 }
