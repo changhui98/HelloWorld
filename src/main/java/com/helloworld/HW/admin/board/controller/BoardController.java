@@ -1,7 +1,8 @@
 package com.helloworld.HW.admin.board.controller;
 
 import com.helloworld.HW.admin.board.dto.RequestBoardConfig;
-import com.helloworld.HW.admin.board.service.BoardSaveService;
+import com.helloworld.HW.admin.board.entity.Board;
+import com.helloworld.HW.admin.board.service.BoardService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
@@ -12,12 +13,14 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.util.List;
+
 @Controller
 @RequestMapping("/admin/board")
 @RequiredArgsConstructor
 public class BoardController {
 
-    private final BoardSaveService boardSaveService;
+    private final BoardService boardService;
     private final BoardValidator boardValidator;
 
     /**
@@ -62,13 +65,22 @@ public class BoardController {
             return "admin/board/add";
         }
 
-        boardSaveService.save(config);
+        boardService.save(config);
 
-        return "admin/board/list";
+        return "redirect:/admin/board/list";
     }
 
+    /**
+     * 게시판 조회 처리
+     *
+     * @param model
+     * @return
+     */
     @GetMapping("/list")
-    public String list(){
+    public String list(Model model){
+
+        List<Board> items = boardService.getlist();
+        model.addAttribute("items", items);
 
         return "admin/board/list";
     }
