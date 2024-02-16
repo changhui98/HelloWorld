@@ -97,7 +97,82 @@ footer {
     margin: 0 auto;
 }
 
-
 /* Footer Css End */
 
+/* 게시판 등록 css Start */
 
+
+.input-field {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 30%;
+  position: relative;
+  height: 60px;
+  overflow: hidden;
+}
+
+.input-field input {
+  width: 100%;
+  height: 100%;
+  color: #FFC81E;
+  padding-top: 20px;
+  border: none;
+  border-bottom: 1px solid gray;
+
+}
+.input-field label {
+  color: gray;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid gray;
+
+}
+.input-field label::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  border-bottom: 3px solid #fce38a;
+  transform: translateX(-100%);
+  transition: all 0.3s ease;
+}
+
+.content-name {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  padding-bottom: 5px;
+  transition: all 0.3s ease;
+}
+.input-field input:focus {
+  outline: none;
+}
+.input-field input:focus + .label-name .content-name,
+.input-field input:valid + .label-name .content-name {
+  transform: translateY(-150%);
+  font-size: 14px;
+  left: 0px;
+  color: #fce38a;
+}
+.input-field input:focus + .label-name::after,
+.input-field input:valid + .label-name::after {
+  transform: translateX(0%);
+}
+
+.btn {
+    margin-top: 10px;
+}
+
+img {
+    margin: 0 auto;
+    width: 300px;
+    height: 200px;
+}
+
+/* 게시판 등록 css End */
