@@ -6,13 +6,30 @@
 
 <section layout:fragment="adminContent">
     (연결성공 확인) 2월 13일 17시 53분
-    <h1>게시판 전체 검색</h1>
+    <h2>게시판 전체 검색</h2>
     <form>
 
     </form>
 
-    <h1>게시판 전체 목록</h1>
+    <h2>게시판 전체 목록</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>순번</th>
+                <th>게시판ID</th>
+                <th>카테고리이름</th>
+            </tr>
 
-    <th:block th:text="${items}"></th:block>
+        </thead>
+        <tbody>
+        <tr th:each="boardDto, status : ${items}">
+            <td th:text="${status.index}"></td>
+            <td th:text="${boardDto.bid}"></td>
+            <td th:text="${boardDto.category}"></td>
+        </tr>
+        </tbody>
+    </table>
+    <h2>게시판 아이디 목록</h2>
+
 </section>
 </html>

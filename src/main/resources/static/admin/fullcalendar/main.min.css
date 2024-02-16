@@ -467,13 +467,13 @@ a.fc-event:hover {
 }
 .fc-h-event {
   border: 1px solid #3788d8;
-  border: 1px solid var(--fc-event-border-color, #FFC81E);
+  border: 1px solid var(--fc-event-border-color, #FDE6BE);
   background-color: #3788d8;
-  background-color: var(--fc-event-bg-color, #FFC81E);
+  background-color: var(--fc-event-bg-color, #FDE6BE);
 }
 .fc-h-event .fc-event-main {
   color: #fff;
-  color: var(--fc-event-text-color, #fff);
+  color: var(--fc-event-text-color, gray);
 }
 .fc-h-event .fc-event-main-frame {
   display: flex;
