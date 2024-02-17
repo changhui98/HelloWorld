@@ -12,20 +12,21 @@
     </form>
 
     <h2>게시판 전체 목록</h2>
-    <table class="table">
+    <table class="table" border="1">
         <thead>
             <tr>
-                <th>순번</th>
-                <th>게시판ID</th>
-                <th>카테고리이름</th>
+                <th>게시판 ID</th>
+                <th>카테고리 이름</th>
+                <th>게시판 이름</th>
             </tr>
 
         </thead>
         <tbody>
-        <tr th:each="boardDto, status : ${items}">
-            <td th:text="${status.index}"></td>
+        <tr th:each="boardDto : ${items}">
+
             <td th:text="${boardDto.bid}"></td>
             <td th:text="${boardDto.category}"></td>
+            <td th:text="${boardDto.bName}"></td>
         </tr>
         </tbody>
     </table>

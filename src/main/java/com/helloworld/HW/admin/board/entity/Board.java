@@ -38,14 +38,14 @@ public class Board extends BaseDate {
     private boolean active; // 게시판 사용 여부
 
 
-    public List<String> getCategories(){
-        List<String> categories = new ArrayList<>();
+    public List<String> getBNames(){
+        List<String> bNames = new ArrayList<>();
 
-        if(StringUtils.hasText(category)){
-            categories = Arrays.stream(category.trim().split("//n"))
+        if(StringUtils.hasText(bName)){
+            bNames = Arrays.stream(bName.trim().split("//n"))
                     .map(s -> s.trim().replaceAll("//r",""))
                     .toList();
         }
-        return categories;
+        return bNames;
     }
 }

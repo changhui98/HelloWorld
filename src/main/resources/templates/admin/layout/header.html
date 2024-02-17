@@ -3,11 +3,11 @@
         <h1><a th:href="@{/admin}"><span><img src="/images/logo1.png" class="imgLogo"/></span></a></h1>
     </div>
 
-    <nav class="clearfix mainmenu">
+    <nav class="hwClearFix mainmenu">
         <ul id="fromInsideOut">
             <li><a href="#"><span>회원 관리</span></a>
                 <ul class="submenu">
-                    <li><a>회원조회</a></li>
+                    <li><a>회원 관리</a></li>
                 </ul>
             </li>
 
@@ -21,14 +21,21 @@
 
             <li><a href="#"><span>기타 관리</span></a>
                 <ul class="submenu">
-                    <li><a>메뉴1</a></li>
-                    <li><a>메뉴2</a></li>
+                    <li><a>공지사항</a></li>
+                    <li><a>질의응답</a></li>
+                    <li><a>FAQ</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#"><span>파일 관리</span></a>
+                <ul class="submenu">
+                    <li><a>파일 관리</a></li>
                 </ul>
             </li>
         </ul>
     </nav>
 
-    <div class="admin_btn">
+    <div class="hwAdminBtn">
         <a th:href="@{/}">HOME</a>
     </div>
 </header>

@@ -8,7 +8,7 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-          var calendarEl = document.getElementById("calendar");
+          var calendarEl = document.getElementById("hwCalendar");
           var calendar = new FullCalendar.Calendar(calendarEl, {
             locale: "ko",
             initialView: "dayGridMonth",
@@ -82,7 +82,7 @@
           calendar.render();
         });
     </script>
-    <div id="calendar"></div>
+    <div id="hwCalendar"></div>
     <div
             id="popup"
             style="
