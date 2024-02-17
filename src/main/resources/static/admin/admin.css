@@ -8,27 +8,44 @@
     font-family: "Noto Sans KR", sans-serif;
 }
 
+/*
+    ul, li 태그 리스트 모양 제거
+*/
 ul, li {
     list-style:none;
 }
 
-.clearfix:after {
+/*
+    clear: float 속성 제거
+        -none: 기초값 clear를 설정하지 않은값.
+        -left: 왼쪽 취소
+        -right: 오른쪽 취소
+        -both: 오른쪽 왼쪽 모두 취소
+*/
+.hwClearFix:after {
     content: ' ';
     display: block;
     clear: both;
 }
 
+/*
+  a(anchor):
+  - 링크 밑줄 제거
+  - a태그 색상 변경
+*/
 a {
     text-decoration: none;
     color: gray;
 }
 
+/*
+    Header 부분 position: absolute 설정으로 인하여
+    body(본문) 내용 시작 위치 강제 변경
+ */
 body {
-
     overflow-y: scroll;
     padding-top: 100px;
 }
-
 
 /* Header Css Start */
 header {
@@ -61,7 +78,7 @@ nav > ul > li {
     position: relative;
 }
 
-.admin_btn {
+.hwAdminBtn {
     line-height: 100px;
 }
 
@@ -99,10 +116,11 @@ nav > ul > li ul li {
 section {
     width: 800px;
     margin: 0 auto;
-    text-align: center;
+    margin-top: 100px;
+
 }
 
-#calendar {
+#hwCalendar {
     margin-top: 100px;
 }
 
@@ -119,8 +137,8 @@ footer {
 /* 게시판 등록 css Start */
 
 
-.input-field {
-  margin-top: 10px;
+.hwInputField {
+  margin-top: 20px;
   margin-bottom: 10px;
   margin: 0 auto;
   width: 100%;
@@ -129,7 +147,7 @@ footer {
   overflow: hidden;
 }
 
-.input-field input {
+.hwInputField input {
   width: 100%;
   height: 100%;
   color: gray;
@@ -139,7 +157,7 @@ footer {
   font-size: 16px;
 
 }
-.input-field label {
+.hwInputField label {
   color: gray;
   position: absolute;
   bottom: 0px;
@@ -150,7 +168,7 @@ footer {
   border-bottom: 1px solid gray;
 
 }
-.input-field label::after {
+.hwInputField label::after {
   content: "";
   position: absolute;
   bottom: -1px;
@@ -162,53 +180,66 @@ footer {
   transition: all 0.3s ease;
 }
 
-.content-name {
+.hwContentName {
   position: absolute;
   bottom: 0px;
   left: 0px;
   padding-bottom: 5px;
   transition: all 0.3s ease;
 }
-.input-field input:focus {
+.hwInputField input:focus {
   outline: none;
 }
-.input-field input:focus + .label-name .content-name,
-.input-field input:valid + .label-name .content-name {
+.hwInputField input:focus + .hwLabelName .hwContentName,
+.hwInputField input:valid + .hwLabelName .hwContentName {
   transform: translateY(-150%);
   font-size: 14px;
   left: 0px;
   color: #FFB400;
 }
-.input-field input:focus + .label-name::after,
-.input-field input:valid + .label-name::after {
+.hwInputField input:focus + .hwLabelName::after,
+.hwInputField input:valid + .hwLabelName::after {
   transform: translateX(0%);
 }
 
-.btn {
-    margin-top: 10px;
-}
 
-.imgBox {
-    margin: 0 auto;
-    width: 300px;
-    height: 200px;
-}
 
-.input-group {
 
+.hwInputGroup {
     width: 600px;
     margin: 0 auto;
     border: 0.5px solid gray;
     border-radius: 10px;
     padding: 30px;
 
-
 }
 
-.input-group h3, .input-group h2 {
+.hwInputGroup h3, .hwInputGroup h2 {
     color: #5a5a5a;
     text-align: left;
     margin-bottom: 10px;
+}
+
+.hwInputGroup h3 {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.hwToggleRadio {
+    color:gray;
+    display: flex;
+    justify-content: space-between;
+}
+.hwToggleRadio > div > label{
+    margin-right: 10px;
+}
+
+.hwInputGroup > .hwError {
+    color: red;
+}
+
+#active_true:checked ~ label[for=active_true] {
+    color:#FFB400;
 }
 
 /* 게시판 등록 css End */

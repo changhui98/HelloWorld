@@ -2,35 +2,40 @@
     <div class="error global" th:each="err :${#fields.globalErrors()}" th:text="${err}"></div>
 
     <!-- spellcheck="false": 오타 입력시 빨간줄 미출력(false) -->
-    <div class="input-group">
+    <div class="hwInputGroup">
     <h2>게시판 등록/수정</h2>
+
         <h3>게시판 기본 설정</h3>
-        <input type="radio" name="active" value="true" id="active_true" th:field="*{active}">
-        <label for="active_true">사용</label>
-        <input type="radio" name="active" value="false" id="active_false" th:field="*{active}">
-        <label for="active_false">미사용</label>
+        <div class="hwError" th:each="err: ${#fields.errors('bid')}" th:text="${err}"></div>
+        <div class="hwToggleRadio">게시판 사용여부
+            <div>
+                <input type="radio" name="active" value="true" id="active_true" th:field="*{active}" checked>
+                <label for="active_true">Open</label>
+                <input type="radio" name="active" value="false" id="active_false" th:field="*{active}" >
+                <label for="active_false">Close</label>
+            </div>
+        </div>
 
-        <div class="input-field">
+        <div class="hwInputField">
             <input type="text" name="bid" autocomplete="off" required id="bid" spellcheck="false"/>
-            <label for="bid" class="label-name">
-                <span class="content-name">게시판 ID</span>
+            <label for="bid" class="hwLabelName">
+                <span class="hwContentName">게시판 ID</span>
             </label>
         </div>
 
 
-        <div class="input-field">
+        <div class="hwInputField">
             <input type="text" name="category" autocomplete="off" required id="category" spellcheck="false"/>
-            <label for="category" class="label-name">
-                <span class="content-name">게시판 카테고리</span>
+            <label for="category" class="hwLabelName">
+                <span class="hwContentName">게시판 카테고리</span>
             </label>
         </div>
-
 
         <h3>하위 게시판 기본 설정</h3>
-        <div class="textarea-field">
-            <textarea type="text" name="bName" autocomplete="off" required id="bName" spellcheck="false"></textarea>
-            <label for="bName" class="label-name">
-                <span class="content">게시판 이름</span>
+        <div class="hwInputField">
+            <input type="text" name="bName" autocomplete="off" required id="bName" spellcheck="false"></input>
+            <label for="bName" class="hwLabelName">
+                <span class="hwContentName">게시판 이름</span>
             </label>
         </div>
     </div>
