@@ -5,8 +5,15 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Lob;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.springframework.util.StringUtils;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.UUID;
 
 @Entity
@@ -29,4 +36,16 @@ public class Board extends BaseDate {
     private String bName; // 게시판 하위 분류 이름
 
     private boolean active; // 게시판 사용 여부
+
+
+    public List<String> getCategories(){
+        List<String> categories = new ArrayList<>();
+
+        if(StringUtils.hasText(category)){
+            categories = Arrays.stream(category.trim().split("//n"))
+                    .map(s -> s.trim().replaceAll("//r",""))
+                    .toList();
+        }
+        return categories;
+    }
 }

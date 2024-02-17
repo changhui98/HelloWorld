@@ -6,7 +6,7 @@ let header = document.querySelector('header'),
      });
 
      nav.addEventListener('mouseout', function(){
-        header.style.height = '50px';
+        header.style.height = '100px';
      });
 
 /* 아래 코드는 먹지 않음.  */

@@ -1,31 +1,42 @@
 <th:block th:fragment="form" th:object="${requestBoardConfig}">
     <div class="error global" th:each="err :${#fields.globalErrors()}" th:text="${err}"></div>
 
-    폼 템플릿 테스트입니다.(연결성공 확인) 2월 13일 17시 47분
-    <h2>게시판 기본설정</h2>
-
     <!-- spellcheck="false": 오타 입력시 빨간줄 미출력(false) -->
+    <div class="input-group">
+    <h2>게시판 등록/수정</h2>
+        <h3>게시판 기본 설정</h3>
+        <input type="radio" name="active" value="true" id="active_true" th:field="*{active}">
+        <label for="active_true">사용</label>
+        <input type="radio" name="active" value="false" id="active_false" th:field="*{active}">
+        <label for="active_false">미사용</label>
 
-    <div class="input-field">
-        <input type="text" name="bid" autocomplete="off" required id="bid" spellcheck="false"/>
-        <label for="bid" class="label-name">
-            <span class="content-name">테스트1</span>
-        </label>
+        <div class="input-field">
+            <input type="text" name="bid" autocomplete="off" required id="bid" spellcheck="false"/>
+            <label for="bid" class="label-name">
+                <span class="content-name">게시판 ID</span>
+            </label>
+        </div>
+
+
+        <div class="input-field">
+            <input type="text" name="category" autocomplete="off" required id="category" spellcheck="false"/>
+            <label for="category" class="label-name">
+                <span class="content-name">게시판 카테고리</span>
+            </label>
+        </div>
+
+
+        <h3>하위 게시판 기본 설정</h3>
+        <div class="textarea-field">
+            <textarea type="text" name="bName" autocomplete="off" required id="bName" spellcheck="false"></textarea>
+            <label for="bName" class="label-name">
+                <span class="content">게시판 이름</span>
+            </label>
+        </div>
     </div>
 
-    <div class="input-field">
-        <input type="text" name="category" autocomplete="off" required id="category" spellcheck="false"/>
-        <label for="category" class="label-name">
-            <span class="content-name">테스트2</span>
-        </label>
-    </div>
 
-    <div class="input-field">
-        <input type="text" name="bName" autocomplete="off" required id="bName" spellcheck="false"/>
-        <label for="bName" class="label-name">
-            <span class="content-name">테스트3</span>
-        </label>
-    </div>
+
 
     <!--<table>
         <tr>
