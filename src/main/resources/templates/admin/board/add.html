@@ -5,9 +5,9 @@
     layout:decorate="~{admin/layout/main}">
 
 <section layout:fragment="adminContent">
-    테스트입니다.(연결성공 확인) 2월 13일 17시 35분
-    <img src="/images/image.png">
-    <p>테스트입니다.(이미지 연동 성공 확인) 2월 17일 00시 30분</p>
+
+    <img src="/images/image.png" class="imgBox">
+
     <form th:action="@{/admin/board/save}" method="post">
         <th:block th:replace="~{admin/board/form:: form}"></th:block>
 
