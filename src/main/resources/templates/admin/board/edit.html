@@ -9,9 +9,13 @@
         <input type="hidden" name="mode" value="edit">
         <th:block th:replace="~{admin/board/form:: form}"></th:block>
 
-        <div class="hwAdminBtn">
-            <button type="button" class="btn"><a>돌아 가기</a></button>
-            <button type="submit" class="btn">수정 하기</button>
+        <div class="hwDivBtn">
+            <div>
+                <button type="button" class="hwAdminBtn btn-10"><span><a th:href="@{/admin/board/list}">List</a></span></button>
+            </div>
+            <div>
+                <button type="submit" class="hwAdminBtn btn-10"><span>수정 하기</span></button>
+            </div>
         </div>
     </form>
 </section>

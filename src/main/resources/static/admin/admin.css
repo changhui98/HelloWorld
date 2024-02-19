@@ -78,7 +78,8 @@ nav > ul > li {
     position: relative;
 }
 
-.hwAdminBtn {
+.hwHeaderBtn {
+    text-align: center;
     line-height: 100px;
 }
 
@@ -101,7 +102,7 @@ nav > ul > li ul li {
 }
 
 #fromInsideOut a:hover {
-    color:#FFC81E;
+    color:black;
 }
 
 .imgLogo {
@@ -175,7 +176,7 @@ footer {
   left: 0px;
   width: 100%;
   height: 100%;
-  border-bottom: 3px solid #FFB400;
+  border-bottom: 1px solid black;
   transform: translateX(-100%);
   transition: all 0.3s ease;
 }
@@ -195,7 +196,7 @@ footer {
   transform: translateY(-150%);
   font-size: 14px;
   left: 0px;
-  color: #FFB400;
+  color: black;
 }
 .hwInputField input:focus + .hwLabelName::after,
 .hwInputField input:valid + .hwLabelName::after {
@@ -205,14 +206,13 @@ footer {
 .hwInputGroup {
     width: 600px;
     margin: 0 auto;
-    border: 0.5px solid gray;
-    border-radius: 10px;
     padding: 30px;
 
 }
 
+/* 게시판 등록/수정 페이지 제목  */
 .hwInputGroup h3, .hwInputGroup h2 {
-    color: #5a5a5a;
+    color: black;
     text-align: left;
     margin-bottom: 10px;
 }
@@ -223,7 +223,7 @@ footer {
 }
 
 .hwToggleRadio {
-    color:#FFB400;
+    color:gray;
     display: flex;
     justify-content: space-between;
 }
@@ -236,13 +236,66 @@ footer {
     color: red;
 }
 
-#active_true:checked ~ label[for=active_true] {
-    color:#FFB400;
-}
-
 .hwSpanRed {
     color: red;
     border-bottom: 1px solid red;
+}
+
+.hwDivBtn {
+    margin: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.hwDivBtn > button {
+    margin: 20px;
+}
+
+.hwAdminBtn {
+    width: 130px;
+    height: 40px;
+    padding: 10px 25px;
+    border: 0.5px solid gray;
+    border-radius: 20px;
+    background: transparent;
+    cursor: pointer;
+    /*transition: all 0.3s ease;*/
+    position: relative;
+    display: inline-block;
+}
+
+.btn-10 {
+    /*transition: all 0.3s ease;*/
+    overflow: hidden;
+}
+
+.btn-10:after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    /*transition: all 0.3s ease;*/
+    -webkit-transform: scale(.1);
+    transform: scale(.1);
+}
+
+.btn-10:hover {
+    color: #fff;
+}
+
+.btn-10:hover:after {
+    background: #FFB400;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+form {
+    margin: 0 auto;
+    width: 600px;
+    border: solid 0.5px gray;
 }
 
 /* 게시판 등록 css End */

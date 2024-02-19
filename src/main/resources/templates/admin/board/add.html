@@ -9,9 +9,14 @@
         <input type="hidden" name="mode" value="add">
         <th:block th:replace="~{admin/board/form:: form}"></th:block>
 
-        <div class="hwAdminBtn">
-            <button type="reset" class="btn">다시 입력</button>
-            <button type="submit" class="btn">등록 하기</button>
+        <div class="hwDivBtn">
+            <div>
+                <button type="button" class="hwAdminBtn btn-10"><span>List</span></button>
+            </div>
+            <div>
+                <button type="reset" class="hwAdminBtn btn-10"><span>Reset</span></button>
+                <button type="submit" class="hwAdminBtn btn-10"><span>Submit</span></button>
+            </div>
         </div>
     </form>
 </section>
