@@ -202,9 +202,6 @@ footer {
   transform: translateX(0%);
 }
 
-
-
-
 .hwInputGroup {
     width: 600px;
     margin: 0 auto;
@@ -230,6 +227,7 @@ footer {
     display: flex;
     justify-content: space-between;
 }
+
 .hwToggleRadio > div > label{
     margin-right: 10px;
 }
@@ -240,6 +238,11 @@ footer {
 
 #active_true:checked ~ label[for=active_true] {
     color:#FFB400;
+}
+
+.hwSpanRed {
+    color: red;
+    border-bottom: 1px solid red;
 }
 
 /* 게시판 등록 css End */
