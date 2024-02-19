@@ -16,25 +16,47 @@
             </div>
         </div>
 
-        <div class="hwInputField">
-            <input type="text" name="bid" autocomplete="off" required id="bid" spellcheck="false"/>
-            <label for="bid" class="hwLabelName">
+        <div class="hwInputField" th:if="*{mode != 'edit'}">
+            <input type="text" name="bid" autocomplete="off" required th:field="*{bid}" spellcheck="false"/>
+            <label th:for="bid" class="hwLabelName">
+                <span class="hwContentName">게시판 ID</span>
+            </label>
+        </div>
+
+        <div class="hwInputField" th:if="*{mode == 'edit'}">
+            <input type="text" name="bid" autocomplete="off" required th:field="*{bid}" spellcheck="false"/>
+            <label th:for="bid" class="hwLabelName">
                 <span class="hwContentName">게시판 ID</span>
             </label>
         </div>
 
 
-        <div class="hwInputField">
-            <input type="text" name="category" autocomplete="off" required id="category" spellcheck="false"/>
-            <label for="category" class="hwLabelName">
+        <div class="hwInputField" th:if="*{mode != 'edit'}">
+            <input type="text" name="category" autocomplete="off" required th:field="*{category}" spellcheck="false"/>
+            <label th:for="category" class="hwLabelName">
                 <span class="hwContentName">게시판 카테고리</span>
             </label>
         </div>
 
+        <div class="hwInputField" th:if="*{mode == 'edit'}">
+            <input type="text" name="category" autocomplete="off" required th:field="*{category}" spellcheck="false"/>
+            <label th:for="category" class="hwLabelName">
+                <span class="hwContentName">게시판 카테고리</span>
+            </label>
+        </div>
+
+
         <h3>하위 게시판 기본 설정</h3>
-        <div class="hwInputField">
-            <input type="text" name="bName" autocomplete="off" required id="bName" spellcheck="false"></input>
-            <label for="bName" class="hwLabelName">
+        <div class="hwInputField" th:if="*{mode != 'edit'}">
+            <input type="text" name="bName" autocomplete="off" required th:field="*{bName}" spellcheck="false"></input>
+            <label th:for="bName" class="hwLabelName">
+                <span class="hwContentName">게시판 이름</span>
+            </label>
+        </div>
+
+        <div class="hwInputField" th:if="*{mode == 'edit'}">
+            <input type="text" name="bName" autocomplete="off" required th:field="*{bName}" spellcheck="false"></input>
+            <label th:for="bName" class="hwLabelName">
                 <span class="hwContentName">게시판 이름</span>
             </label>
         </div>

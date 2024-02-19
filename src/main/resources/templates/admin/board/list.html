@@ -18,6 +18,7 @@
                 <th>게시판 ID</th>
                 <th>카테고리 이름</th>
                 <th>게시판 이름</th>
+                <th>수정 하기</th>
             </tr>
 
         </thead>
@@ -27,6 +28,9 @@
             <td th:text="${boardDto.bid}"></td>
             <td th:text="${boardDto.category}"></td>
             <td th:text="${boardDto.bName}"></td>
+            <td>
+                <a th:href="@{/admin/board/edit/{boardDto.bid}(boardDto.bid=*{boardDto.bid})}">수정하기</a>
+            </td>
         </tr>
         </tbody>
     </table>
