@@ -1,17 +1,17 @@
 <!-- 게시판 등록 템플릿 -->
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org"
-    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-    layout:decorate="~{admin/layout/main}">
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{admin/layout/main}">
 
 <section layout:fragment="adminContent">
     <form th:action="@{/admin/board/save}" method="post">
-        <input type="hidden" name="mode" value="add">
+        <input type="hidden" name="mode" value="edit">
         <th:block th:replace="~{admin/board/form:: form}"></th:block>
 
         <div>
             <button type="reset" class="btn">다시 입력</button>
-            <button type="submit" class="btn">등록 하기</button>
+            <button type="submit" class="btn">수정 하기</button>
         </div>
     </form>
 </section>

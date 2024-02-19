@@ -12,6 +12,10 @@ public class CommonException extends RuntimeException{
         this.status = status;
     }
 
+    public CommonException(HttpStatus status){
+        this.status = status;
+    }
+
     //응답코드 가져오기
     public HttpStatus getStatus() {
         return status;

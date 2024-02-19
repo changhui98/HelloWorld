@@ -38,6 +38,9 @@ dependencies {
 
 	implementation 'org.springframework.boot:spring-boot-starter-validation'
 
+	// ModelMapper
+	implementation 'org.modelmapper:modelmapper:3.2.0'
+
 	runtimeOnly 'com.oracle.database.jdbc:ojdbc11:23.3.0.23.09'
 	implementation 'com.oracle.database.nls:orai18n:23.3.0.23.09'
 }

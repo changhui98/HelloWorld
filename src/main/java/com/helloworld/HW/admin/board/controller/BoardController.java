@@ -8,10 +8,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -48,6 +45,15 @@ public class BoardController {
         return "admin/board/add";
     }
 
+    @GetMapping("/edit/{bid}")
+    public String edit(@PathVariable("bid") String bid, Model model){
+
+        RequestBoardConfig form= boardService.getForm(bid);
+        model.addAttribute("requestBoardConfig", form);
+
+        return "admin/board/edit";
+    }
+
     /**
      * 게시판 등록 처리
      *
@@ -58,11 +64,13 @@ public class BoardController {
      */
     @PostMapping("/save")
     public String save(@Valid RequestBoardConfig config, Errors errors, Model model){
+        String mode= config.getMode();
 
         boardValidator.validate(config, errors);
+
         if(errors.hasErrors()){
             errors.getAllErrors().stream().forEach(System.out::println);
-            return "admin/board/add";
+            return "admin/board/" + mode;
         }
 
         boardService.save(config);
