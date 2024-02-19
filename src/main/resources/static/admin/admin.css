@@ -223,7 +223,7 @@ footer {
 }
 
 .hwToggleRadio {
-    color:gray;
+    color:#FFB400;
     display: flex;
     justify-content: space-between;
 }
