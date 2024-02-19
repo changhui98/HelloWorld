@@ -3,7 +3,8 @@
 
     <!-- spellcheck="false": 오타 입력시 빨간줄 미출력(false) -->
     <div class="hwInputGroup">
-    <h2>게시판 등록/수정</h2>
+    <h2 th:if="*{mode != 'edit'}">게시판 등록</h2>
+        <h2 th:if="*{mode == 'edit'}">게시판 수정</h2>
 
         <h3>게시판 기본 설정</h3>
         <div class="hwError" th:each="err: ${#fields.errors('bid')}" th:text="${err}"></div>
