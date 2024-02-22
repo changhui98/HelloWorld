@@ -1,23 +1,43 @@
-<div class="frontHeader" th:fragment="headerFragment">
-<header>
-<h1>MAIN HEADER</h1>
-<div>
-<ul>
-<li>
-<a th:href="@{/admin}">ADMIN</a>
-</li>
-</ul>
-</div>
-</header>
+<Header th:fragment="headerFragment">
+ <div>
+  <h1><a th:href="@{/}"><span><img src="/images/logo1.png" class="imgLogo"/></span></a></h1>
+ </div>
+ <nav class="hwClearFix mainmenu">
+  <ul id="fromInsideOut">
+    <li><a href="#"><span>커뮤니티</span></a>
+        <ul class="submenu">
+            <li>자유게시판</li>
+            <li>게시판2</li>
+            <li>게시판3</li>
+        </ul>
+    </li>
+      <li><a href="#"><span>메뉴2</span></a>
+        <ul class="submenu">
+            <li>하위메뉴1</li>
+            <li>하위메뉴2</li>
+            <li>하위메뉴3</li>
+        </ul>
+    </li>
+      <li><a href="#"><span>메뉴3</span></a>
+          <ul class="submenu">
+              <li>하위메뉴1</li>
+              <li>하위메뉴2</li>
+              <li>하위메뉴3</li>
+          </ul>
+      </li>
+      <li><a href="#"><span>메뉴4</span></a>
+          <ul class="submenu">
+              <li>하위메뉴1</li>
+              <li>하위메뉴2</li>
+              <li>하위메뉴3</li>
+          </ul>
+      </li>
+  </ul>
+ </nav>
 
-<nav>
- <ul>
-  <li>커뮤니티
-   <ul>
-    <li><a>자유게시판</a></li>
-   </ul>
-  </li>
-</ul>
-</nav>
+    <div class="hwHeaderBtn">
+        <a th:href="@{/}">HOME</a>
+    </div>
 
-</div>
+
+</Header>
