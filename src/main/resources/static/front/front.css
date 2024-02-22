@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Grandiflora+One&family=Noto+Sans+KR:wght@100..900&display=swap');
+
+/* 메인페이지 공통 범위 */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Noto Sans KR", sans-serif;
+}
+
+/* 메인 영역 크기 조절 */
+main {
+
+    width: 800px;
+    margin: 0 auto;
+    margin-top: 100px;
+
+}
+
+/*
+    ul, li 태그 리스트 모양 제거
+*/
+ul, li {
+    list-style:none;
+}
+
+
+/* 이게 뭘까? */
+.hwClearFix:after {
+    content: ' ';
+    display: block;
+    clear: both;
+}
+
+/*
+  a(anchor):
+  - 링크 밑줄 제거
+  - a태그 색상 변경
+*/
+a {
+    text-decoration: none;
+    color: gray;
+}
+
+/*
+    Header 부분 position: absolute 설정으로 인하여
+    body(본문) 내용 시작 위치 강제 변경
+ */
+body {
+    overflow-y: scroll;
+    padding-top: 100px;
+}
+
+
+
+/* Header Css Start */
+header {
+    width: 1200px;
+    display:flex;
+    justify-content:space-around;
+    background: linear-gradient(white 100px,
+        rgba(255, 255, 255, 0.9) 100px,
+        rgba(255, 255,255, 0.9) );
+    height: 100px;
+    overflow: hidden;
+    transition: height 0.4s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+header > div {
+    line-height: 50px;
+}
+
+nav > ul > li {
+    float: left;
+    line-height: 100px;
+    margin-right: 40px;
+    font-size:18px;
+    position: relative;
+}
+
+.hwHeaderBtn {
+    text-align: center;
+    line-height: 100px;
+}
+
+nav > ul > li ul {
+    width: 100%;
+    line-height:20px;
+    position: absolute;
+}
+
+nav > ul > li ul li {
+    white-space: nowrap;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+#fromInsideOut li span:hover {
+    content: "";
+    border-bottom: 0.5px solid #000;
+    transition: all 250ms ease-out;
+}
+
+#fromInsideOut a:hover {
+    color:black;
+}
+
+ .imgLogo {
+     width:100px;
+     height:100px;
+ }
+
+/* Header Css End */
+
+/* Section Css Start */
+section {
+    width: 800px;
+    margin: 0 auto;
+    margin-top: 100px;
+
+}
+
+#hwCalendar {
+    margin-top: 100px;
+}
+
+/* Section Css End */
+
+/* Footer Css Start */
+footer {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* Footer Css End */
+
+/* Index Css Start */
+        .hwBanner {
+            display: flex;
+            justify-content: center;
+        }
+        .hwBannerBox {
+            height: 250px;
+            width: 1250px;
+            margin-top:20px;
+            margin-bottom:50px;
+            display: flex;
+            background-color: #fff;
+            border-radius: 20px;
+            border: 1px solid #000;
+        }
+
+
+/* Index Css End */

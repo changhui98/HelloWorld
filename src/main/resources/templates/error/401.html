@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{front/layout/main}">
+<main layout:fragment="frontContent">
+    <!-- _content 파일 삽입 -->
+    <th:block th:replace="~{error/_content::common}"></th:block>
+
+</main>
+</html>
