@@ -22,7 +22,8 @@ public class Utils {
 
     public static String getMessage(String code, String type){
         try{
-            type= StringUtils.hasText(type) ? type : "validator";
+            //오타수정
+            type= StringUtils.hasText(type) ? type : "validations";
 
             ResourceBundle bundle= null;
             if(type.equals("commons")){
@@ -33,7 +34,8 @@ public class Utils {
                 bundle= validationsBundle;
             }
             return bundle.getString(code);
-        }catch(Exception e) {
+
+        } catch(Exception e) {
             e.printStackTrace();
             return "";
         }

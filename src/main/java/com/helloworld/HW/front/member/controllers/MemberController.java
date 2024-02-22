@@ -1,12 +1,17 @@
 package com.helloworld.HW.front.member.controllers;
 
+import com.helloworld.HW.common.ExceptionProcessor;
+import com.helloworld.HW.common.Utils;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 //메인 페이지 회원 관련 컨트롤러
 @Controller
 @RequestMapping("/member")
-public class MemberController {
+@RequiredArgsConstructor
+public class MemberController implements ExceptionProcessor {
 
     /**
      * 회원가입
@@ -15,6 +20,11 @@ public class MemberController {
     @GetMapping("/join")
    public String join() {
        return "front/member/join";
+   }
+
+   @PostMapping("/join")
+   public String joinPs() {
+        return "redirect:/front/member/login";
    }
 
     /**
