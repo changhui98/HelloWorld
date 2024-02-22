@@ -158,3 +158,101 @@ footer {
 
 
 /* Index Css End */
+
+/* Join Css Start */
+
+.hwJoinDd {
+    display: inline-block;
+    height: 35px;
+
+}
+
+.hwJoinDt {
+    display: inline-block;
+    width: 120px;
+    height: 35px;
+    vertical-align: middle;
+    color: #454545;
+    padding-top:10px;
+    margin-top: 10px;
+    margin-bottom:15px;
+
+
+}
+.hwJoinDt2, .hwTermsDiv {
+   display: inline-block;
+    width: 200px;
+    height: 35px;
+    vertical-align: middle;
+    color: #454545;
+    padding-top:10px;
+    margin-top: 10px;
+
+}
+
+.hwJoinInput {
+    border: 0;
+    border-bottom: 1px solid #dbdbdb;
+    width: 300px;
+    font-size:15px;
+    padding-bottom:10px;
+
+}
+
+.hwJoinInput:focus, .hwJoinInput:focus {
+    outline: none; /* 포커스시 기본적으로 표시되는 외곽선 제거 */
+    border-bottom: 1px solid #dbdbdb; /* 포커스시 하단에 밑줄 추가 */
+}
+
+.hwJoinSkillLabel,.hwJoinEmpLabel{
+    margin-right: 20px;
+}
+
+
+.hwJoinFieldset {
+    width: 800px;
+    margin: 0 auto;
+    margin-top: 50px;
+    padding:100px;
+    padding-top:40px;
+    border-radius: 10px;
+    border: 1px solid #dbdbdb;
+}
+
+.hwRadioDd {
+   display: block;
+
+}
+
+.hsJoinH1 {
+text-align: center;
+color: #454545;
+}
+
+.hwRequiredSpan {
+color: #ad0003;}
+
+.hwJoinBtn {
+    height: 40px;
+    width:150px;
+    background-color: #ffe18f;
+    border:2px solid #ffe18f;
+    margin-top:30px;
+}
+.hwJoinBtnDiv {
+    margin: 0 auto;
+    text-align: center;
+}
+#hwJoinCancelBtn {
+    background-color: #fff;
+}
+
+hr{
+margin-top:20px;
+margin-bottom:20px;
+}
+
+h3{
+margin-top:70px;
+}
+/* Join Css End */
