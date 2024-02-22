@@ -5,18 +5,112 @@
 <html xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorate="~{front/layout/main}">
-<head>
-    <title>회원가입</title>
-</head>
 
+<main layout:fragment="frontContent">
+    <h1 th:text="#{회원가입}" class="hsJoinH1"></h1>
+    <fieldset class="hwJoinFieldset">
+    <form name="hwJoinForm" method="post" th:action="@{/member/join}" autocomplete="off" th:object="${requestJoin}">
+        <div class="error global" th:each="err : ${#fields.globalErrors()}"
+             th:text="${err}"></div>
 
-<body>
+        <h3>필수항목</h3>
+        <hr>
+        <dl>
+            <dt class="hwJoinDt">
+                <span th:text="#{이메일}"></span><span class="hwRequiredSpan">*</span>
+            </dt>
+            <dd class="hwJoinDd">
+                <input type="text" name="email" th:field="*{email}" class="hwJoinInput">
+                <div class="error" th:each="err : ${#fields.errors('email')}"
+                     th:text="${err}"></div>
+            </dd>
+        </dl>
 
-    <main layout:fragment="frontContent">
-        <h1>회원가입</h1>
-    </main>
+        <dl>
+            <dt class="hwJoinDt">
+                <span th:text="#{비밀번호}"></span><span class="hwRequiredSpan">*</span>
+            </dt>
+            <dd class="hwJoinDd">
+                <input type="password" name="password" th:field="*{password}" class="hwJoinInput">
+                <div class="error" th:each="err : ${#fields.errors('password')}"
+                     th:text="${err}"></div>
+            </dd>
+        </dl>
 
-</body>
+        <dl>
+            <dt class="hwJoinDt">
+                <span th:text="#{비밀번호_확인}"></span><span class="hwRequiredSpan">*</span>
+            </dt>
+            <dd class="hwJoinDd">
+                <input type="password" name="confirmPassword" th:field="*{confirmPassword}" class="hwJoinInput">
+                <div class="error" th:each="err : ${#fields.errors('confirmPassword')}"
+                     th:text="${err}"></div>
+            </dd>
+        </dl>
 
+        <dl>
+            <dt class="hwJoinDt">
+                <span th:text="#{닉네임}"></span><span class="hwRequiredSpan">*</span>
+            </dt>
+            <dd class="hwJoinDd">
+                <input type="text" name="nickname" th:field="*{nickname}" class="hwJoinInput">
+                <div class="error" th:each="err : ${#fields.errors('nickname')}"
+                     th:text="${err}"></div>
+            </dd>
+        </dl>
+        <h3>선택항목</h3>
+        <hr>
+        <dl>
+            <dt  class="hwJoinDt2" th:text="#{직업}"></dt>
+            <dd class="hwJoinDd hwRadioDd">
+                <!--MemberAdviceController에서 정의한 model값들과 연결-->
+                <th:block th:each="type, status : ${employTypes}">
+                    <!-- 1. type[0] : 라디오버튼의 값
+                         2. id: [employed_0, employed_1...]
+                         3. 사용자가 선택한 라디오버튼 값이 employed 필드와 연결 -->
+                <input type="radio" name="employed" th:value="${type[0]}"
+                       th:id="${'employed_' + status.index}"
+                       th:field="*{employed}" class="hwJoinRadio">
+                    <!--type[1] : 라디오버튼과 연결될 라벨 이름(==input의 id)-->
+                <label th:for="${'employed_' + status.index}"
+                       th:text="${type[1]}" class="hwJoinEmpLabel"></label>
 
+                </th:block>
+                <div class="error" th:each="err : ${#fields.errors('employed')}"
+                     th:text="${err}"></div>
+            </dd>
+        </dl>
+
+        <dl>
+            <dt class="hwJoinDt2" th:text="#{보유스킬}"></dt>
+            <dd class="hwJoinDd">
+                <th:block th:each="type, status : ${skillTypes}">
+                    <input type="checkbox" name="skill" th:value="${type[0]}"
+                           th:id="${'skill_' + status.index}"
+                           th:field="*{skill}" class="hwJoinCkb">
+                    <label th:for="${'skill_' + status.index}"
+                           th:text="${type[1]}" class="hwJoinSkillLabel"></label>
+                </th:block>
+
+                <div class="error" th:each="err : ${#fields.errors('skill')}"
+                     th:text="${err}"></div>
+            </dd>
+        </dl>
+
+        <div th:text="#{회원가입_약관}" class="hwTermsDiv"></div>
+        <div class="terms">약관</div>
+        <div class="terms_agree">
+            <input type="checkbox" name="agree" value="true" id="agree">
+            <label for="agree" th:text="#{회원가입_약관에_동의합니다.}"></label>
+
+            <div class="error" th:each = "err : ${#fields.errors('agree')}"
+            th:text="${err}"></div>
+        </div>
+        <div class="hwJoinBtnDiv">
+        <button type="submit" th:text="#{가입하기}" class="hwJoinBtn"></button>
+            <button class="hwJoinBtn" id="hwJoinCancelBtn">취소</button>
+        </div>
+    </form>
+    </fieldset>
+</main>
 </html>
