@@ -1,5 +1,6 @@
 package com.helloworld.HW.front.member.dto;
 
+import com.helloworld.HW.front.member.constants.EmployType;
 import jakarta.validation.constraints.AssertTrue;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
@@ -30,7 +31,7 @@ public class RequestJoin {
 
     private List<String> skill; //보유스킬
 
-    private String employed; //님 개발자임? 준비생임? 학생임?
+    private String employed = EmployType.TYPE_EMPLOYED.name(); //님 개발자임? 준비생임? 학생임?
 
 
 

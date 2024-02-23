@@ -1,14 +1,10 @@
 package com.helloworld.HW.front.member.controllers;
 
 import com.helloworld.HW.front.member.constants.EmployType;
-import com.helloworld.HW.front.member.constants.SkillType;
-import com.helloworld.HW.front.member.dto.RequestSkill;
-import com.helloworld.HW.front.member.entities.Skill;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ModelAttribute;
 
-import java.lang.reflect.Field;
-import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 @ControllerAdvice("com.helloworld")
@@ -29,6 +25,7 @@ public class MemberAdviceController {
      */
     @ModelAttribute("skillTypes")
     public List<String> getSkillTypes(){
+        /*
         RequestSkill skill = new RequestSkill();
         List<String> mySkill = new ArrayList<>();
         Field[] fields = skill.getClass().getDeclaredFields();
@@ -36,7 +33,7 @@ public class MemberAdviceController {
             String fieldName = field.getName();
             mySkill.add(fieldName);
             System.out.println("어디갔니 " + fieldName);
-        }
-        return mySkill;
+        } */
+        return Arrays.asList("java", "python", "htmlCss", "c", "csharpcplus", "js");
     }
 }

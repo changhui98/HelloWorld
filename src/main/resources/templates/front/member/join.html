@@ -87,7 +87,7 @@
                 <th:block th:each="type, status : ${skillTypes}">
                     <input type="checkbox" name="skill" th:value="${type}"
                            th:id="'skill_' + ${status.index}"
-                           class="hwJoinCkb">
+                           class="hwJoinCkb" th:field="*{skill}">
                     <label th:for="'skill_' + ${status.index}"
                            th:text="${type}" class="hwJoinSkillLabel"></label>
                 </th:block>
