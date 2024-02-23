@@ -85,18 +85,19 @@
             <dt class="hwJoinDt2" th:text="#{보유스킬}"></dt>
             <dd class="hwJoinDd">
                 <th:block th:each="type, status : ${skillTypes}">
-                    <input type="checkbox" name="skill" th:value="${type[0]}"
-                           th:id="${'skill_' + status.index}"
-                           th:field="*{skill}" class="hwJoinCkb">
-                    <label th:for="${'skill_' + status.index}"
-                           th:text="${type[1]}" class="hwJoinSkillLabel"></label>
+                    <input type="checkbox" name="skill" th:value="${type}"
+                           th:id="'skill_' + ${status.index}"
+                           class="hwJoinCkb">
+                    <label th:for="'skill_' + ${status.index}"
+                           th:text="${type}" class="hwJoinSkillLabel"></label>
                 </th:block>
 
                 <div class="error" th:each="err : ${#fields.errors('skill')}"
                      th:text="${err}"></div>
             </dd>
         </dl>
-        -
+
+
 
 
         <div th:text="#{회원가입_약관}" class="hwTermsDiv"></div>

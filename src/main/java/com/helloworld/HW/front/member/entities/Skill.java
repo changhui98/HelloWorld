@@ -16,4 +16,10 @@ public class Skill {
     private boolean python;
 
     private boolean htmlCss;
+
+    private boolean c;
+
+    private boolean csharpcplus;
+
+
 }

@@ -8,6 +8,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public enum SkillType {
+    /*
     TYPE_JAVA(Utils.getMessage("SkillType.TYPE_JAVA", "commons")),
     TYPE_PYTHON(Utils.getMessage("SkillType.TYPE_PYTHON","commons")),
     TYPE_C(Utils.getMessage("SkillType.TYPE_C","commons")),
@@ -36,7 +37,7 @@ public enum SkillType {
     public String getTitle() {
         return title;
     }
-
+*/
 
 
 
