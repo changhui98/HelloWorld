@@ -54,14 +54,15 @@ public class JoinValidator implements Validator, PasswordValidator {
 
         //2. 비밀번호 복잡성 체크 - 알파벳 대소문자 1개씩, 숫자 1개, 특수문자 1개
         if(StringUtils.hasText(password) &&
-                (!alphaCheck(password,true) ||
+                (!alphaCheck(password,false) ||
                  !numberCheck(password) ||
                  !specialCharsCheck(password))) {
             errors.rejectValue("password", "Complexity");
         }
 
         //3. 비밀번호, 비밀번호 확인 일치여부 체크
-        if(StringUtils.hasText(password) && StringUtils.hasText(confirmPassword)) {
+        if(StringUtils.hasText(password) && StringUtils.hasText(confirmPassword)
+        &&!password.equals(confirmPassword)) {
             errors.rejectValue("confirmPassword", "Mismatch.password");
         }
     }

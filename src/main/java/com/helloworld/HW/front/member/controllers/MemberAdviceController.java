@@ -1,10 +1,10 @@
 package com.helloworld.HW.front.member.controllers;
 
 import com.helloworld.HW.front.member.constants.EmployType;
-import com.helloworld.HW.front.member.constants.SkillType;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ModelAttribute;
 
+import java.util.Arrays;
 import java.util.List;
 
 @ControllerAdvice("com.helloworld")
@@ -20,10 +20,20 @@ public class MemberAdviceController {
 
     /**
      * SkillType enum클래스에서 enum 상수들을 가져와 skillTypes에 넣음 -> 뷰에 전달
+     * 수정 -> RequestSkill 커맨드객체에서 피륻명을 가져와서 skillTypes에 넣음
      * @return
      */
     @ModelAttribute("skillTypes")
-    public List<String[]> getSkillTypes(){
-        return SkillType.getList();
+    public List<String> getSkillTypes(){
+        /*
+        RequestSkill skill = new RequestSkill();
+        List<String> mySkill = new ArrayList<>();
+        Field[] fields = skill.getClass().getDeclaredFields();
+        for(Field field : fields){
+            String fieldName = field.getName();
+            mySkill.add(fieldName);
+            System.out.println("어디갔니 " + fieldName);
+        } */
+        return Arrays.asList("java", "python", "htmlCss", "c", "csharpcplus", "js");
     }
 }
