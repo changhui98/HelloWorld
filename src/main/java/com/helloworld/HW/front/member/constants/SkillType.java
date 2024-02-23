@@ -1,6 +1,7 @@
 package com.helloworld.HW.front.member.constants;
 
 import com.helloworld.HW.common.Utils;
+import lombok.Data;
 
 import javax.swing.*;
 import java.util.Arrays;
@@ -13,9 +14,6 @@ public enum SkillType {
     TYPE_CSHARPCPLUS(Utils.getMessage("SkillType.TYPE_CSHARTCPLUS","commons")), //C#C++
     TYPE_JS(Utils.getMessage("SkillType.TYPE_JS","commons")),
     TYPE_HTMLCSS(Utils.getMessage("SkillType.TYPE_HTMLCSS","commons")); // HTML/CSS
-
-
-
 
 
     private final String title;
@@ -38,4 +36,8 @@ public enum SkillType {
     public String getTitle() {
         return title;
     }
+
+
+
+
 }

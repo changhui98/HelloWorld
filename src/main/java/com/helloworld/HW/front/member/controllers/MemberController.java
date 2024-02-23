@@ -36,7 +36,7 @@ public class MemberController implements ExceptionProcessor {
         if(errors.hasErrors()) {
             return ("front/member/join");
         }
-        return "redirect:/front/member/login";
+        return "redirect:/member/login";
    }
 
     /**

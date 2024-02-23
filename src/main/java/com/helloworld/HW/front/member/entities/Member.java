@@ -14,7 +14,7 @@ public class Member extends BaseDate {
     @Column(length=80, nullable = false, unique = true)
     private String email;
 
-    @Column(length=40, nullable = false, unique = true)
+    @Column(length=80, nullable = false, unique = true)
     private String password;
 
     @Column(length=24, nullable = false, unique = true) //닉네임 8글자 제한

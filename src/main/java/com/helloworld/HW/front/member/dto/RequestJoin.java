@@ -6,6 +6,8 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 import lombok.Data;
 
+import java.util.List;
+
 //요청데이터를 처리할 커맨드 객체
 @Data
 public class RequestJoin {
@@ -25,7 +27,8 @@ public class RequestJoin {
     @AssertTrue
     private boolean agree; //약관 동의
 
-    private String skill; //보유스킬
+
+    private List<String> skill; //보유스킬
 
     private String employed; //님 개발자임? 준비생임? 학생임?
 
