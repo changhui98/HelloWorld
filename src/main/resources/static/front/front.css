@@ -10,12 +10,12 @@
 
 /* 메인 영역 크기 조절 */
 main {
-
     width: 800px;
     margin: 0 auto;
     margin-top: 100px;
-
 }
+
+
 
 /*
     ul, li 태그 리스트 모양 제거
@@ -156,7 +156,25 @@ footer {
             border: 1px solid #000;
         }
 
+      /*  .hwMainSearchInDiv {
+        width: 600px;
+        height:50px;
 
+        }
+
+        .hwMainSearchDiv {
+        width: 580px;
+        height:45px;
+        border: 1px solid;
+                border-radius:20px;
+
+        }
+
+        .hwMainSearchInput {
+        width: 580px;
+        height:45px;
+        }
+        */
 /* Index Css End */
 
 /* Join Css Start */
@@ -191,8 +209,7 @@ footer {
 }
 
 .hwJoinInput {
-    border: 0;
-    border-bottom: 1px solid #dbdbdb;
+    border: 1px solid #dbdbdb;
     width: 300px;
     font-size:15px;
     padding-bottom:10px;
@@ -256,3 +273,58 @@ h3{
 margin-top:70px;
 }
 /* Join Css End */
+
+/* Login Css Start */
+    .hwLoginTitleDiv {
+        vertical-align:center;
+        text-align:center;
+        margin: 50px;
+
+
+    }
+
+    .hwLoginDiv {
+
+        margin:50px;
+        display: flex;
+        justify-content: center;
+        align-items:center;
+
+    }
+
+    .hwLoginInDiv {
+    text-align: center; /* 내부 요소 가운데 정렬을 위해 text-align 속성을 사용 */
+    }
+
+    .hwLoginForm {
+    border: 1px solid #dbdbdb;
+    width: 600px;
+    height: 400px;
+    text-align:center;
+    border-radius: 10px;
+
+    }
+
+    .hwLoginInput {
+        border:1px solid #6b6b6b;
+        width:400px;
+        height:50px;
+        margin-bottom:10px;
+        border-radius:5px;
+        padding-left:5px;
+
+    }
+
+    .hwLoginBtn {
+        width:400px;
+        height:50px;
+        background-color: #ffe18f;
+        border: 1px solid #ffe18f;
+        font-size:16px;
+    }
+
+
+    .hwFIndDiv {
+        margin: 10px;
+    }
+/* Login Css End */

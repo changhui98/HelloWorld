@@ -287,7 +287,7 @@ footer {
 }
 
 .btn-10:hover:after {
-    background: #FFB400;
+    background: #ffe18f;
     -webkit-transform: scale(1);
     transform: scale(1);
 }
