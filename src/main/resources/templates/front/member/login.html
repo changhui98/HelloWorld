@@ -4,16 +4,37 @@
 <html xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorate="~{front/layout/main}">
-<head>
-    <title>로그인</title>
-</head>
+<main layout:fragment="frontContent">
 
+    <div class="hwLoginTitleDiv">
+    <h1 th:text="#{로그인}"></h1>
+    </div>
+    <div class="hwLoginDiv">
+    <form name="frmLogin" method="post" th:action = "@{/member/login}"
+          autocomplete="off" class="hwLoginForm">
+        <div class="hwLoginInDiv">
+        <dl>
+            <dd>
+                <input type="text" name="username" placeholder="이메일을 입력하세요"
+                class="hwLoginInput">
+            </dd>
+        </dl>
+        <dl>
+            <dd>
+                <input type="password" name="password" placeholder="비밀번호를 입력하세요"
+                       class="hwLoginInput">
+            </dd>
+        </dl>
+        </div>
+        <button type="submit" th:text="#{로그인}" class="hwLoginBtn"></button>
+        <div class="hwFIndDiv">
+            <a th:href="@{/member/join}" th:text="#{회원가입}"></a>ㅣ
+            <a th:href="@{/member/join}" th:text="#{아이디_찾기}"></a>ㅣ
+            <a th:href="@{/member/join}" th:text="#{비밀번호_찾기}"></a>
+        </div>
+    </form>
 
-<body>
-    <main layout:fragment="frontContent">
-        <h1>로그인</h1>
-    </main>
-</body>
-
+    </div>
+</main>
 
 </html>
