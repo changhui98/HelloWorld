@@ -10,7 +10,7 @@
 
 /* 메인 영역 크기 조절 */
 main {
-    width: 800px;
+    width: 1250px;
     margin: 0 auto;
     margin-top: 100px;
 }
@@ -146,8 +146,8 @@ footer {
             justify-content: center;
         }
         .hwBannerBox {
-            height: 250px;
-            width: 1250px;
+            height: 300px;
+            width: 1000px;
             margin-top:20px;
             margin-bottom:50px;
             display: flex;
@@ -156,7 +156,7 @@ footer {
             border: 1px solid #000;
         }
 
-      /*  .hwMainSearchInDiv {
+        .hwMainSearchInDiv {
         width: 600px;
         height:50px;
 
@@ -174,7 +174,7 @@ footer {
         width: 580px;
         height:45px;
         }
-        */
+
 /* Index Css End */
 
 /* Join Css Start */
@@ -284,8 +284,10 @@ margin-top:70px;
     }
 
     .hwLoginDiv {
-
-        margin:50px;
+        border: 1px solid #dbdbdb;
+        width: 600px;
+        margin:50px auto;
+        height: 400px;
         display: flex;
         justify-content: center;
         align-items:center;
@@ -294,12 +296,11 @@ margin-top:70px;
 
     .hwLoginInDiv {
     text-align: center; /* 내부 요소 가운데 정렬을 위해 text-align 속성을 사용 */
+
     }
 
     .hwLoginForm {
-    border: 1px solid #dbdbdb;
-    width: 600px;
-    height: 400px;
+
     text-align:center;
     border-radius: 10px;
 
@@ -312,6 +313,7 @@ margin-top:70px;
         margin-bottom:10px;
         border-radius:5px;
         padding-left:5px;
+
 
     }
 
