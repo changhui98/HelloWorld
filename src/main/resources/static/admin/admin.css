@@ -326,7 +326,7 @@ th {
     opacity: 0.9;
     cursor: pointer;
 }
-
+/* 240227 comment : 이거때문에 달력찌그러짐 */
 th:nth-child(1),
 td:nth-child(1) {
     width: 10%;
@@ -370,3 +370,47 @@ td:nth-child(1) {
 
 /* 게시판 관리 Css End */
 
+/* Footer Css Start */
+
+    Footer {
+        font-size:0.75rem;
+        color: #454545;
+        justify-content: center;
+        padding-top: 20px;
+        margin-top:50px;
+        margin-bottom: 50px;
+        }
+
+    .hwFooterDiv {
+         display:flex;
+         width: 1000px;
+         flex-wrap: wrap; /* 요소가 너비를 벗어나면 다음 줄에 배치되도록 설정 */
+         margin: 0 auto;
+        margin-top:20px;
+
+    }
+
+    .hwFooterInDiv1 {
+        flex: 1;
+    }
+    .hwFooterInDiv2 {
+        flex: 1;
+        }
+
+    .hwFooterInDiv3 {
+        flex: 1;
+    }
+
+    .hwFooterInDiv4 {
+        margin-top:20px;
+
+        }
+
+    .hwFooterInDiv5 {
+        margin-top:20px;
+        font-size:0.9rem;
+        font-weight:600;
+
+    }
+
+/* Footer Css End */

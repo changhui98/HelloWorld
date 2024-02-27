@@ -10,9 +10,15 @@
 
 /* 메인 영역 크기 조절 */
 main {
-    width: 1250px;
+    width: 1200px;
     margin: 0 auto;
     margin-top: 100px;
+}
+
+p {
+    font-size:0.9rem;
+    font-weight:600;
+    margin-bottom:10px;
 }
 
 
@@ -116,6 +122,9 @@ nav > ul > li ul li {
      height:100px;
  }
 
+ .hwHeaderA {
+    margin: 5px;
+ }
 /* Header Css End */
 
 /* Section Css Start */
@@ -132,15 +141,36 @@ section {
 
 /* Section Css End */
 
-/* Footer Css Start */
-footer {
-    width: 1200px;
-    margin: 0 auto;
-}
-
-/* Footer Css End */
 
 /* Index Css Start */
+
+        /* 검색박스  */
+        .hwMainSearchOutDiv {
+            display: flex;
+            justify-content:center;
+        }
+
+
+        .hwMainSearchDiv {
+        width: 580px;
+        height:52px;
+        border: 3px solid #ffc757;
+        border-radius:20px;
+
+        }
+
+
+        .hwMainSearchInput {
+        width: 530px;
+        height:45px;
+        border: none;
+        outline: none;
+        margin-left:13px;
+        margin-top:1px;
+        font-size: 1.3rem;
+        }
+
+        /* 배너박스 */
         .hwBanner {
             display: flex;
             justify-content: center;
@@ -153,27 +183,9 @@ footer {
             display: flex;
             background-color: #fff;
             border-radius: 20px;
-            border: 1px solid #000;
+            border: 3px solid #6e6e6e;
         }
 
-        .hwMainSearchInDiv {
-        width: 600px;
-        height:50px;
-
-        }
-
-        .hwMainSearchDiv {
-        width: 580px;
-        height:45px;
-        border: 1px solid;
-                border-radius:20px;
-
-        }
-
-        .hwMainSearchInput {
-        width: 580px;
-        height:45px;
-        }
 
 /* Index Css End */
 
@@ -234,6 +246,8 @@ footer {
     padding-top:40px;
     border-radius: 10px;
     border: 1px solid #dbdbdb;
+    box-shadow: 4px 4px 10px 0 rgba(0,0,0, 0.1);
+
 }
 
 .hwRadioDd {
@@ -291,6 +305,7 @@ margin-top:70px;
         display: flex;
         justify-content: center;
         align-items:center;
+        border-radius:5px;
 
     }
 
@@ -330,3 +345,46 @@ margin-top:70px;
         margin: 10px;
     }
 /* Login Css End */
+
+/* Footer Css Start */
+
+    Footer {
+        font-size:0.75rem;
+        color: #454545;
+        justify-content: center;
+        padding-top: 20px;
+        }
+
+    .hwFooterDiv {
+         display:flex;
+         width: 1000px;
+         flex-wrap: wrap; /* 요소가 너비를 벗어나면 다음 줄에 배치되도록 설정 */
+         margin: 0 auto;
+        margin-top:20px;
+
+    }
+
+    .hwFooterInDiv1 {
+        flex: 1;
+    }
+    .hwFooterInDiv2 {
+        flex: 1;
+        }
+
+    .hwFooterInDiv3 {
+        flex: 1;
+    }
+
+    .hwFooterInDiv4 {
+        margin-top:20px;
+
+        }
+
+    .hwFooterInDiv5 {
+        margin-top:20px;
+        font-size:0.9rem;
+        font-weight:600;
+
+    }
+
+/* Footer Css End */
