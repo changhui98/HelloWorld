@@ -5,36 +5,49 @@
       layout:decorate="~{admin/layout/main}">
 
 <section layout:fragment="adminContent">
-    (연결성공 확인) 2월 13일 17시 53분
-    <h2>게시판 전체 검색</h2>
-    <form>
 
+    <h2>게시판 전체 검색</h2>
+    <form class="search-box" action="" method="get">
+        <input type="text" class="search-txt" name="" placeholder="검색어를 입력하세요.">
+        <button class="search-btn" type="submit">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
     </form>
 
     <h2>게시판 전체 목록</h2>
-    <table class="table" border="1">
-        <thead>
+    <table class="hwAdminTable">
+        <thead class="hwAdminTHead">
             <tr>
                 <th>게시판 ID</th>
                 <th>카테고리 이름</th>
                 <th>게시판 이름</th>
-                <th>수정 하기</th>
+                <th>사용 여부</th>
+                <th>수정</th>
+                <th>삭제</th>
             </tr>
 
         </thead>
-        <tbody>
+        <tbody class="hwAdminTBody">
         <tr th:each="boardDto : ${items}">
 
             <td th:text="${boardDto.bid}"></td>
             <td th:text="${boardDto.category}"></td>
             <td th:text="${boardDto.bName}"></td>
+            <td th:if="${boardDto.active == true}">사용중</td>
+            <td th:if="${boardDto.active != true}">미사용</td>
             <td>
-                <a th:href="@{/admin/board/edit/{boardDto.bid}(boardDto.bid=*{boardDto.bid})}">수정하기</a>
+                <a th:href="@{/admin/board/edit/{boardDto.bid}(boardDto.bid=*{boardDto.bid})}">수정</a>
+            </td>
+            <td>
+                <a href="javascript:void(0);"
+                th:data-uri="@{|/admin/board/delete/${boardDto.bid}|}"
+                th:text="삭제"
+                class="delete"></a>
             </td>
         </tr>
         </tbody>
     </table>
-    <h2>게시판 아이디 목록</h2>
+
 
 </section>
 </html>

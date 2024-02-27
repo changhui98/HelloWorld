@@ -9,25 +9,12 @@ let header = document.querySelector('header'),
         header.style.height = '100px';
      });
 
-/* 아래 코드는 먹지 않음.  */
-
-let mainMenuList = document.querySelectorAll('.mainmenu > li'),
-    subMenu = document.querySelectorAll('.submenu'),
-    headerHeight = header.offsetHeight,
-    subMenuHeight = 0;
-
-    for(let i = 0; i< subMenu.length; i++){
-        if(subMenu[i].offsetHeight > subMenuHeight){
-            subMenuHeight = subMenu[i].offsetHeight;
-        }
-    }
-
-    for(let j = 0; j< mainMenuList.length; j++){
-        mainMenuList[j].addEventListener('mouseover', function(){
-            header.style.height = headerHeight + subMenuHeight + 'px';
+/* 게시판 관리 */
+const delete_elements = document.getElementsByClassName("delete");
+    Array.from(delete_elements).forEach(function(element) {
+        element.addEventListener('click', function(){
+            if(confirm("정말로 삭제하시겠습니까?")){
+            location.href= this.dataset.uri;
+            };
         });
-
-        mainMenuList[j].addEventListener('mouseout', function(){
-            header.style.height = headerHeight + 'px';
-        });
-    }
+    });
