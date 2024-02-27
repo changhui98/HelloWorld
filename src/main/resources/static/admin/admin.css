@@ -299,3 +299,74 @@ form {
 }
 
 /* 게시판 등록 css End */
+
+/* 게시판 관리 Css Start */
+.hwAdminTable {
+    border-collapse: collapse;
+    width: 600px
+    margin: 0rem auto;
+    box-shadow: 4px 4px 10px 0 rgba(0,0,0, 0.1);
+    background0color: white;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+th {
+
+    color: #FFC81E;
+}
+
+.hwAdminTBody tr:hover {
+    background-color: #d3d3d3;
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+th:nth-child(1),
+td:nth-child(1) {
+    width: 10%;
+}
+
+.search-box {
+    height: 40px;
+    width: 500px;
+    background: white;
+    border-radius: 40px;
+    padding: 10px;
+    border: 1px solid #FFC81E;
+}
+
+.search-txt {
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0px;
+    color: #797979;
+    font-size: 16px;
+
+    width: 430px;
+}
+
+.search-btn {
+    color: black;
+    float:right;
+    width: 40px;
+    height: 100%;
+    border-radius: 50%;
+    background: white;
+    border:none;
+    font-size:16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* 게시판 관리 Css End */
+

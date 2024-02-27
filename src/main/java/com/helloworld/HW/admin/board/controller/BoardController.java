@@ -93,4 +93,14 @@ public class BoardController {
         return "admin/board/list";
     }
 
+    @GetMapping("/delete/{bid}")
+    public String delete(@PathVariable("bid") String bid ){
+        Board board = boardService.get(bid);
+
+        this.boardService.delete(board);
+
+        return "redirect:/admin/board/list";
+    }
+
+
 }

@@ -5,8 +5,9 @@
     layout:decorate="~{admin/layout/main}">
 
 <section layout:fragment="adminContent">
-    <form th:action="@{/admin/board/save}" method="post">
+    <form th:action="@{/admin/board/save}" method="post" class="testAdminForm">
         <input type="hidden" name="mode" value="add">
+
         <th:block th:replace="~{admin/board/form:: form}"></th:block>
 
         <div class="hwDivBtn">
@@ -18,6 +19,7 @@
                 <button type="submit" class="hwAdminBtn btn-10"><span>Submit</span></button>
             </div>
         </div>
+
     </form>
 </section>
 </html>

@@ -76,4 +76,8 @@ public class BoardService {
 
         boardRepository.saveAndFlush(board);
     }
+
+    public void delete(Board board){
+        this.boardRepository.delete(board);
+    }
 }
