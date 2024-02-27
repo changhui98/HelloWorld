@@ -141,6 +141,34 @@ footer {
 /* Footer Css End */
 
 /* Index Css Start */
+
+        /* 검색박스  */
+        .hwMainSearchOutDiv {
+            display: flex;
+            justify-content:center;
+        }
+
+
+        .hwMainSearchDiv {
+        width: 580px;
+        height:52px;
+        border: 1px solid #000;
+        border-radius:20px;
+
+        }
+
+
+        .hwMainSearchInput {
+        width: 530px;
+        height:45px;
+        border: none;
+        outline: none;
+        margin-left:13px;
+        margin-top:1px;
+
+        }
+
+        /* 배너박스 */
         .hwBanner {
             display: flex;
             justify-content: center;
@@ -156,24 +184,6 @@ footer {
             border: 1px solid #000;
         }
 
-        .hwMainSearchInDiv {
-        width: 600px;
-        height:50px;
-
-        }
-
-        .hwMainSearchDiv {
-        width: 580px;
-        height:45px;
-        border: 1px solid;
-                border-radius:20px;
-
-        }
-
-        .hwMainSearchInput {
-        width: 580px;
-        height:45px;
-        }
 
 /* Index Css End */
 
