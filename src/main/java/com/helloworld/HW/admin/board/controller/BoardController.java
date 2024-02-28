@@ -93,6 +93,12 @@ public class BoardController {
         return "admin/board/list";
     }
 
+    /**
+     * 게시판 삭제 처리
+     *
+     * @param bid
+     * @return
+     */
     @GetMapping("/delete/{bid}")
     public String delete(@PathVariable("bid") String bid ){
         Board board = boardService.get(bid);
