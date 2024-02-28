@@ -5,10 +5,13 @@ import com.helloworld.HW.admin.board.entity.Board;
 import com.helloworld.HW.admin.board.repository.BoardRepository;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
 import java.util.List;
+
+import static org.springframework.data.domain.Sort.Order.desc;
 
 @Service
 @RequiredArgsConstructor
@@ -46,7 +49,7 @@ public class BoardService {
      */
     public List<Board> getlist(){
 
-        List<Board> items = (List<Board>)boardRepository.findAll();
+        List<Board> items = (List<Board>)boardRepository.findAll(Sort.by(desc("createdAt")));
 
         return items;
     }

@@ -17,28 +17,28 @@
     <h2>게시판 전체 목록</h2>
     <table class="hwAdminTable">
         <thead class="hwAdminTHead">
-            <tr>
-                <th>게시판 ID</th>
-                <th>카테고리 이름</th>
-                <th>게시판 이름</th>
-                <th>사용 여부</th>
-                <th>수정</th>
-                <th>삭제</th>
+            <tr class="hwAdminBoardTr">
+                <th class="hwAdminBoardTh">게시판 ID</th>
+                <th class="hwAdminBoardTh">카테고리 이름</th>
+                <th class="hwAdminBoardTh">게시판 이름</th>
+                <th class="hwAdminBoardTh">사용 여부</th>
+                <th class="hwAdminBoardTh">수정</th>
+                <th class="hwAdminBoardTh">삭제</th>
             </tr>
 
         </thead>
         <tbody class="hwAdminTBody">
         <tr th:each="boardDto : ${items}">
 
-            <td th:text="${boardDto.bid}"></td>
-            <td th:text="${boardDto.category}"></td>
-            <td th:text="${boardDto.bName}"></td>
-            <td th:if="${boardDto.active == true}">사용중</td>
-            <td th:if="${boardDto.active != true}">미사용</td>
-            <td>
+            <td th:text="${boardDto.bid}" class="hwAdminBoardTd"></td>
+            <td th:text="${boardDto.category}" class="hwAdminBoardTd"></td>
+            <td th:text="${boardDto.bName}" class="hwAdminBoardTd"></td>
+            <td th:if="${boardDto.active == true}" class="hwAdminBoardTd">사용중</td>
+            <td th:if="${boardDto.active != true}" class="hwAdminBoardTd">미사용</td>
+            <td class="hwAdminBoardTd">
                 <a th:href="@{/admin/board/edit/{boardDto.bid}(boardDto.bid=*{boardDto.bid})}">수정</a>
             </td>
-            <td>
+            <td class="hwAdminBoardTd">
                 <a href="javascript:void(0);"
                 th:data-uri="@{|/admin/board/delete/${boardDto.bid}|}"
                 th:text="삭제"

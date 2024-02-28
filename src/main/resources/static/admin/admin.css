@@ -303,20 +303,20 @@ form {
 /* 게시판 관리 Css Start */
 .hwAdminTable {
     border-collapse: collapse;
-    width: 600px
+    width: 100%;
     margin: 0rem auto;
     box-shadow: 4px 4px 10px 0 rgba(0,0,0, 0.1);
     background0color: white;
 }
 
-th, td {
+.hwAdminBoardTh, .hwAdminBoardTd {
     padding: 8px;
     text-align: left;
     border-bottom: 1px solid #ddd;
     text-align: center;
 }
 
-th {
+.hwAdminBoardTh {
 
     color: #FFC81E;
 }
@@ -327,9 +327,9 @@ th {
     cursor: pointer;
 }
 /* 240227 comment : 이거때문에 달력찌그러짐 */
-th:nth-child(1),
-td:nth-child(1) {
-    width: 10%;
+.hwAdminBoardTh:nth-child(1),
+.hwAdminBoardTd:nth-child(1) {
+    width: 15%;
 }
 
 .search-box {

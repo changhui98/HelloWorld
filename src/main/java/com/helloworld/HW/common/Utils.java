@@ -44,4 +44,15 @@ public class Utils {
     public static String getMessage(String code){
         return getMessage(code, null);
     }
+
+    /**
+     * 0이하 정수 인 경우 1이상 정수로 대체
+     *
+     * @param num
+     * @param replace
+     * @return
+     */
+    public static int onlyPositiveNumber(int num, int replace){
+        return num < 1 ? replace : num;
+    }
 }
