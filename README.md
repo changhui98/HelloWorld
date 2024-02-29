@@ -17,3 +17,8 @@
 # 화면설계서
 
 ![project-관리자페이지 메인  drawio](https://github.com/changhui98/HelloWorld/assets/143060426/f5ebd89f-8cbd-4ba1-8c64-73f018987576)
+
+
+# 수정 
+![project-페이지-8 drawio](https://github.com/changhui98/HelloWorld/assets/143060426/c68564ea-1933-4725-b7d5-7458ec70de85)
+![project-페이지-13 drawio](https://github.com/changhui98/HelloWorld/assets/143060426/23dfdf3e-12f1-4abc-a335-41830e8994a8)
