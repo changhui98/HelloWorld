@@ -4,7 +4,8 @@
 + 프로젝트 기간: 2024.02.05 ~
 
 + 팀원소개
-![project-페이지-8 drawio](https://github.com/changhui98/HelloWorld/assets/143060426/c68564ea-1933-4725-b7d5-7458ec70de85)
+![project-페이지-8 drawio](https://github.com/changhui98/HelloWorld/assets/143060426/d9bf8cf6-1f2d-49f3-82cb-a3544ca754ea)
+![project-페이지-13 drawio](https://github.com/changhui98/HelloWorld/assets/143060426/af9eec90-c9db-4d5a-8ef5-7f244f065824)
 
 + 개발환경 및 기술스택
 ![project-페이지-13 drawio](https://github.com/changhui98/HelloWorld/assets/143060426/23dfdf3e-12f1-4abc-a335-41830e8994a8)
