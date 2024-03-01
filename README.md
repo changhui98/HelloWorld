@@ -5,7 +5,8 @@
 
 + 팀원소개 / 기술스택
 ![project-페이지-8 drawio](https://github.com/changhui98/HelloWorld/assets/143060426/d9bf8cf6-1f2d-49f3-82cb-a3544ca754ea)
-![project-페이지-13 drawio](https://github.com/changhui98/HelloWorld/assets/143060426/af9eec90-c9db-4d5a-8ef5-7f244f065824)
+![project-페이지-13 drawio (1)](https://github.com/changhui98/HelloWorld/assets/143060426/88f72cbe-adf4-41e8-bcd9-7fc4707af3a1)
+
 
 
 # 화면설계서
