@@ -22,7 +22,7 @@ public class MemberInfo implements UserDetails {
     //특정 권한에 대한 인가(괸리자 or 멤버 or ...)
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return null;
+        return authorities;
     }
 
 
