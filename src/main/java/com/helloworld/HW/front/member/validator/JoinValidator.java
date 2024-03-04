@@ -1,7 +1,7 @@
 package com.helloworld.HW.front.member.validator;
 
 import com.helloworld.HW.common.validators.PasswordValidator;
-import com.helloworld.HW.front.member.MemberRepository;
+import com.helloworld.HW.front.member.repositories.MemberRepository;
 import com.helloworld.HW.front.member.dto.RequestJoin;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;

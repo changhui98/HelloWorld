@@ -31,5 +31,6 @@ public class MemberUtil {
         session.removeAttribute("NotBlank_username");
         session.removeAttribute("NotBlank_password");
         session.removeAttribute("Global_error");
+        System.out.println("세션비워졌니");
     }
 }

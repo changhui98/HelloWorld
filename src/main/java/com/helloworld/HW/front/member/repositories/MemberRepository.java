@@ -1,4 +1,4 @@
-package com.helloworld.HW.front.member;
+package com.helloworld.HW.front.member.repositories;
 
 import com.helloworld.HW.front.member.entities.Member;
 import com.helloworld.HW.front.member.entities.QMember;

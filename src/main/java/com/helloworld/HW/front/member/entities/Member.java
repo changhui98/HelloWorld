@@ -4,8 +4,10 @@ import com.helloworld.HW.common.entity.BaseDate;
 import com.helloworld.HW.front.member.constants.EmployType;
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.ToString;
 import org.springframework.util.StringUtils;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -36,4 +38,7 @@ public class Member extends BaseDate {
 
         return Arrays.stream(skill.split(",")).toList();
     }
+    @ToString.Exclude //해당 필드 포함X (순환 참조 방지)
+    @OneToMany(mappedBy = "member", fetch = FetchType.LAZY) //주인 명시
+    private List<Authorities> authorities = new ArrayList<>();
 }
