@@ -1,5 +1,7 @@
 package com.helloworld.HW.common;
 
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
@@ -9,6 +11,7 @@ import java.util.ResourceBundle;
 @Component
 @RequiredArgsConstructor
 public class Utils {
+
 
     private final static ResourceBundle commonsBundle;
     private final static ResourceBundle errorsBundle;
