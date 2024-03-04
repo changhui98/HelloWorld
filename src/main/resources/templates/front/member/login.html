@@ -12,21 +12,31 @@
     <div class="hwLoginDiv">
     <form name="frmLogin" method="post" th:action = "@{/member/login}"
           autocomplete="off" class="hwLoginForm">
+        <input type = "hidden" name="redirectURL" th:if="${param.redirectURL != null}"
+               th:value="${param.redirectURL}">
         <div class="hwLoginInDiv">
         <dl>
             <dd>
                 <input type="text" name="username" placeholder="이메일을 입력하세요"
-                class="hwLoginInput">
+                class="hwLoginInput" th:value="${session.username}">
+                <div class="error" th:if="${session.NotBlank_username != null}"
+                     th:text="${session.NotBlank_username}"></div>
             </dd>
         </dl>
         <dl>
             <dd>
                 <input type="password" name="password" placeholder="비밀번호를 입력하세요"
                        class="hwLoginInput">
+                <div class="error" th:if="${session.NotBlank_password != null}"
+                    th:text="${session.NotBlank_password}"></div>
             </dd>
         </dl>
+            <!--글로벌 에러 -->
+            <div class="error" th:if="${session.Global_error != null}"
+                 th:text="${session.Global_error}"></div>
         </div>
         <button type="submit" th:text="#{로그인}" class="hwLoginBtn"></button>
+
         <div class="hwFIndDiv">
             <a th:href="@{/member/join}" th:text="#{회원가입}"></a>ㅣ
             <a th:href="@{/member/join}" th:text="#{아이디_찾기}"></a>ㅣ
