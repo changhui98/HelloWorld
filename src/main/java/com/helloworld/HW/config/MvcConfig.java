@@ -14,6 +14,7 @@ public class MvcConfig implements WebMvcConfigurer {
     public MessageSource messageSource(){
         ResourceBundleMessageSource ms = new ResourceBundleMessageSource();
         ms.setDefaultEncoding("UTF-8");
+        ms.setUseCodeAsDefaultMessage(true); // 메세지 코드 X -> 코드 그대로 출력
         ms.setBasenames("messages.commons", "messages.errors", "messages.validations");
 
         return ms;

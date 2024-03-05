@@ -47,9 +47,23 @@
             </label>
         </div>
 
+        <div class="hwInputField" th:if="*{mode != 'edit'}">
+            <input type="number" name="listOrder" autocomplete="off" required th:field="*{listOrder}" spellcheck="false"/>
+            <label th:for="listOrder" class="hwLabelName">
+                <span class="hwContentName">진열 가중치</span>
+            </label>
+        </div>
+
+        <div class="hwInputField" th:if="*{mode == 'edit'}">
+            <input type="number" name="listOrder" autocomplete="off" required th:field="*{listOrder}" spellcheck="false"/>
+            <label th:for="listOrder" class="hwLabelName">
+                <span class="hwContentName">진열 가중치</span>
+            </label>
+        </div>
+
 
         <h3>하위 게시판 기본 설정</h3>
-        <div class="hwInputField" th:if="*{mode != 'edit'}">
+        <!--<div class="hwInputField" th:if="*{mode != 'edit'}">
             <input type="text" name="bName" autocomplete="off" required th:field="*{bName}" spellcheck="false"></input>
             <label th:for="bName" class="hwLabelName">
                 <span class="hwContentName">게시판 이름</span>
@@ -61,6 +75,15 @@
             <label th:for="bName" class="hwLabelName">
                 <span class="hwContentName">게시판 이름</span>
             </label>
+        </div>-->
+
+        <p>게시판 분류</p>
+        <div th:if="*{mode != 'edit'}">
+            <textarea class="hwTextArea" name="bName" required th:field="*{bName}" spellcheck="false" rows="{1}"></textarea>
+        </div>
+
+        <div th:if="*{mode == 'edit'}">
+            <textarea class="hwTextArea" name="bName" required th:field="*{bName}" spellcheck="false" rows="{1}"></textarea>
         </div>
     </div>
 

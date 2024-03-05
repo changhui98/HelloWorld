@@ -76,6 +76,7 @@ public class BoardService {
         board.setActive(form.isActive());
         board.setCategory(form.getCategory());
         board.setBName(form.getBName());
+        board.setListOrder(form.getListOrder());
 
         boardRepository.saveAndFlush(board);
     }

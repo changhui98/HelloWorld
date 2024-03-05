@@ -1,11 +1,10 @@
 package com.helloworld.HW.common;
 
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 
+import java.util.Objects;
 import java.util.ResourceBundle;
 
 @Component
@@ -57,5 +56,20 @@ public class Utils {
      */
     public static int onlyPositiveNumber(int num, int replace){
         return num < 1 ? replace : num;
+    }
+
+    /**
+     * \n 또는 \r\n -> <br>
+     *
+     * @param str
+     * @return
+     */
+    public String nl2br(String str){
+        str = Objects.requireNonNullElse(str, "");
+
+        str = str.replaceAll("\\n", "<br>")
+                .replaceAll("\\r","");
+
+        return str;
     }
 }
