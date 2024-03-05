@@ -14,6 +14,8 @@ public class RequestBoardConfig {
 
     private boolean active; // 게시판 사용 여부
 
+    private int listOrder;
+
     @NotBlank
     private String bid; // 게시판 아이디
 

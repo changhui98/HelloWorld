@@ -29,6 +29,8 @@ public class Board extends BaseDate {
 
     private String gid = UUID.randomUUID().toString();
 
+    private int listOrder; // 진열 가중치
+
     @Column(length = 60, nullable = false)
     private String category; // 게시판 카테고리
 
@@ -36,7 +38,6 @@ public class Board extends BaseDate {
     private String bName; // 게시판 하위 분류 이름
 
     private boolean active; // 게시판 사용 여부
-
 
     public List<String> getBNames(){
         List<String> bNames = new ArrayList<>();
