@@ -20,13 +20,10 @@ const delete_elements = document.getElementsByClassName("delete");
     });
 
 
-
-const DEFAULT_HEIGHT = 40;
-
-const $textarea = document.querySelector('textarea');
-    $textarea.oninput = (event) => {
-        const $target = event.target;
-
-        $target.style.height = 0;
-        $target.style.height = DEFAULT_HEIGHT + $target.scrollHeight + 'px';
-    };
+$(document).ready(function(){
+    $('.wrap').on('keyup', 'textarea', function(e){
+        $(this).css('height', 'auto');
+        $(this).height(this.scrollHeight);
+    });
+    $('.wrap').find('textarea').keyup();
+});
