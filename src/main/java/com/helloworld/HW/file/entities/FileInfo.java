@@ -1,7 +1,6 @@
 package com.helloworld.HW.file.entities;
 
 import com.helloworld.HW.common.entity.BaseMember;
-import groovy.transform.TailRecursive;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -21,7 +20,7 @@ import java.util.UUID;
             })
 public class FileInfo extends BaseMember {
     @Id @GeneratedValue
-    private Long seq;
+    private Long seq; // 파일 등록 번호, 서버에 업로드 하는 파일명 기준
 
     @Column(length=65, nullable = false)
     private String gid = UUID.randomUUID().toString(); //기본값 (자바에서 unique한 키 생성해줌 - UUID)
