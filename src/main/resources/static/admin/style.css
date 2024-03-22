@@ -1,0 +1,37 @@
+/* 제목 공통 */
+
+.hwAdminConfigSubject {
+   margin: 0;
+   padding: 0 0 20px 10px;
+   font-size: 2rem;
+   border-bottom: 2px solid #222;
+   margin-bottom: 30px;
+   line-height: 1;
+}
+
+h2 {
+    margin: 0 0 10px 0;
+    font-size: 1.385rem;
+    line-height: 1;
+}
+
+/* 테이블 공통 S */
+.table_cols {
+    border-spacing: 0;
+    width: 100%;
+    border-top: 2px solid #222;
+    background: #fff;
+}
+
+.table_cols th, .table_cols td {
+    padding: 10px;
+    border-bottom: 1px solid #d5d5d5;
+}
+
+.table_cols th {
+    background: #ccc;
+    font-weight: normal;
+}
+
+/* 테이블 공통 E */
+
