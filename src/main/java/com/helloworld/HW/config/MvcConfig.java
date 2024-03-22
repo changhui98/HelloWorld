@@ -7,6 +7,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.support.ResourceBundleMessageSource;
 import org.springframework.web.filter.HiddenHttpMethodFilter;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
@@ -15,6 +16,16 @@ public class MvcConfig implements WebMvcConfigurer {
 
     @Autowired
     private FileProperties fileProperties;
+
+    @Override
+    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+        registry.addResourceHandler(fileProperties.getUrl() + "**")
+                .addResourceLocations("file:///" + fileProperties.getPath());
+
+        registry.addResourceHandler("/**")
+                .addResourceLocations("classpath:/static/");
+
+    }
 
     @Bean
     public MessageSource messageSource(){
