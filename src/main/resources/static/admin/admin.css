@@ -8,6 +8,10 @@
     font-family: "Noto Sans KR", sans-serif;
 }
 
+:root {
+    --main-color:#FFC81E;
+}
+
 /*
     ul, li 태그 리스트 모양 제거
 */
